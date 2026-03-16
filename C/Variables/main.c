@@ -1,6 +1,8 @@
 #include <stdio.h>
 
 
+#define PI 3.14 // these are constant global variables available throughout the source code
+
 static int x = 10; // global static variables are only visible to the file where they are declared
                    // no other source file can access them, so they are useful for encapsulation
 
@@ -49,6 +51,15 @@ int main(){
     counter();
     counter();
 
+    // the next type of variables are kind of niche
+    // but whatever bruv here ya go
+
+    volatile int x = 13; // volatile tells the compiler that this vairable may undergo changes by external souces during the execution of the program
+
+    // the next is the opposite of volatile is more widely used
+    const int y = 134;
+
+    // 'const' tells the compiler that this vairable may not be changed during the execution of the program at any point
 
     return 0;
 }
