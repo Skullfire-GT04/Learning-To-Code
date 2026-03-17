@@ -42,7 +42,13 @@ int main(){
     fputc('\n', f);
 
     // or you can write a string as follows
-    fprintf(f, "world!");
+    fprintf(f, "world!\n");
+
+    const char* msg = "Something weird about this.\n";
+
+    // or you can write a string into the file like so
+
+    fwrite(msg, sizeof(msg), sizeof(msg), f);
 
     // after doing whatever it is you wanted to do with the file
     // you have to close the file as follows
@@ -69,7 +75,7 @@ int main(){
     char buf[256];
     fgets(buf, sizeof(buf), f);
 
-    printf("%s\n", buf);
+    printf("%s", buf);
 
     // but you see this has a problem, it stop reading when it hits a \n character
     // so the better solution would be
@@ -100,7 +106,7 @@ int main(){
     if(removed){
         perror("Failed to remove file!");
     }else{
-        printf("Successfully remove file.\n");
+        printf("Successfully removed file.\n");
     }
     
     return 0;
