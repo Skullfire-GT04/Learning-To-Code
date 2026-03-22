@@ -45,5 +45,74 @@ int main(){
     putchar('h');
     putchar('\n');
 
+    // Output formatting
+    // printf provides a powerful way to format output in c
+
+    // For integers
+    // the format is %wd 
+    // w = width 
+
+    int x = 78423;
+
+    printf("%d\n", x); // normal
+    printf("%10d\n", x); // with formatting (right justified)
+    printf("%-10d\n", x); // left justified
+    printf("%010d\n", x); // padded with zeroes
+
+    // for characters
+    // the format is %wc
+    // w = width
+
+    char c = 'a';
+
+    printf("%c\n", c); // normal
+    printf("%10c\n", c); // formatted (right justified)
+
+    // for floating point numbers
+    // the format is % w.p f
+    // w = width, p = precision
+
+    float a = 124.23445f;
+
+    printf("%f\n", a); // normal
+    printf("%10.3f\n", a); // formatted (right justified)
+    printf("%-7.3f\n", a); // formatted (left justified)
+    printf("%.3f\n", a); // only precision specified
+
+    // you can also print floating point numbers in scientific notation like so
+    // the format is the same
+
+    printf("%10.6e\n", a);
+
+
+    // for strings
+    // the format is %w.p s
+    // w = width, p = count or number of character to be printed
+
+    const char* s = "This is a string exmaple.";
+
+    printf("%s\n", s); // normal
+    printf("%20.12s\n", s); // formatted (right justified)
+    printf("%-20.15s\n", s); // formatted (left justified)
+    printf("%.10s\n", s); // only count specified
+
+
+    // subsituting values for width or precision or count in formatted output
+
+    /*
+    in printf it is possible to provide the values for w and p via 
+    variable or expressions like so
+
+    printf("%*.*f", width, precision, num);
+
+    here '*' symbol is used to subsitute the value which will be replaced by width and precision repectively
+    */
+
+    // like
+    printf("%.*s\n", 12, s); // here 12 is the count value 
+
+    // or
+    printf("%*.*f", 8, 5, a); // here 8 is the width and 5 is the precision
+
     return EXIT_SUCCESS;
 }
