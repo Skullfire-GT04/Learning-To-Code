@@ -74,7 +74,7 @@ int main(){
     // because the order matters like so
     int h = a++; // this assigns a to h then increments a by 1
     a--;
-    int i = ++a; // this increments a by 1 then assigns the new value to h
+    int i = ++a; // this increments a by 1 then assigns the new value to i
 
     printf("%d, %d", h, i);
 

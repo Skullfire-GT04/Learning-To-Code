@@ -37,5 +37,13 @@ int main(){
     putc('m', stdout);
     putc('\n', stdout);
 
+    // there is another way to put single character on the console 
+
+    putchar('Y');
+    putchar('e');
+    putchar('a');
+    putchar('h');
+    putchar('\n');
+
     return EXIT_SUCCESS;
 }

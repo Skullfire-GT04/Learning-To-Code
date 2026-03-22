@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <ctype.h>
 
 
 int main(){
@@ -30,6 +30,20 @@ int main(){
     }
 
     printf("Hello %s, so you are %d years old.\n", name, age);
+    
+    // you can also take in single character inputs like so
+    
+    getchar(); // this is to eat the newline character 
+    printf("Do you want to quit?");
+    char ans = getchar(); // getchar takes a single character from stdin (stdandard input)
+
+    tolower(ans);
+
+    if(ans == 'y'){
+        printf("Okay bye !");
+    }else{
+        printf("Hah lol, bye anyway.");
+    }
 
     return EXIT_SUCCESS;
 }
