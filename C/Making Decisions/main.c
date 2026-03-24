@@ -31,6 +31,39 @@ int main(){
         printf("Welcome to the club man!\n");
     }
 
+    // now to use a switch case
+
+    /*
+    the format is like so
+
+    switch(expression){
+        case 1: expression;
+        case 2: expression;
+        .
+        .
+        .
+        .
+        case n: expression;
+        default:
+            expresison;
+    }
+    */
+
+    switch(age){
+        case 50:
+            printf("Damn bro, you pushing it now. Shouldn't you be with your kids or something?\n");
+            break;
+        case 100:
+            printf("Ok so you just trollin, but I can see you are an oldie so whatevr bruv.\n");
+            break;
+        case 30:
+            printf("Bro look, this is no my business, but we gotta stop going to clubs, we need to lock in broski.\n");
+            break;
+        default:
+            printf("Don't do it bro, truse me. You know what I am talking about.\n");
+            break;
+    }
+
     printf("Now you have to register in our system to allow you in.\n");
     printf("What's your name? :");
     scanf("%20s", &name);
@@ -53,7 +86,12 @@ int main(){
     
     fclose(names);
     
-    // now how to use the ternary operator
+    /*
+       now how to use the ternary operator
+       the syntax goes like this
+       conditional expression ? if true then this : if no then this one lol
+       i.e. expresison : if true : if false
+    */
     const char* msg = registered ? "Welcome you are already registered!\n" : "We didn't find you name in the list, but we will register you now.\n";
     printf("%s", msg);
     
@@ -66,9 +104,6 @@ int main(){
 
         printf("Done! You now now enter !\n");
     }
-
-
-
     
     return EXIT_SUCCESS;
 }
