@@ -46,7 +46,6 @@ int main(){
     while(fgets(buf, sizeof(buf), names) != NULL){
         buf[strcspn(buf, "\n")] = '\0';
         if(!strcmp(buf, name)){
-            printf("Welcome %s you are already registered!\n", name);
             registered = 1;
             break;
         }
@@ -54,8 +53,11 @@ int main(){
     
     fclose(names);
     
+    // now how to use the ternary operator
+    const char* msg = registered ? "Welcome you are already registered!\n" : "We didn't find you name in the list, but we will register you now.\n";
+    printf("%s", msg);
+    
     if(!registered){
-        printf("We didn't find you name in the list, but we will register you now.\n");
         names = fopen("names.txt", "a");
 
         fprintf(names, "%s\n", name);
@@ -64,6 +66,9 @@ int main(){
 
         printf("Done! You now now enter !\n");
     }
+
+
+
     
     return EXIT_SUCCESS;
 }
