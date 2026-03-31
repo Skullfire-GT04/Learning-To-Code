@@ -57,10 +57,10 @@ int main(){
             printf("Ok so you just trollin, but I can see you are an oldie so whatevr bruv.\n");
             break;
         case 30:
-            printf("Bro look, this is no my business, but we gotta stop going to clubs, we need to lock in broski.\n");
+            printf("Bro look, this is not my business, but we gotta stop going to clubs, we need to lock in broski.\n");
             break;
         default:
-            printf("Don't do it bro, truse me. You know what I am talking about.\n");
+            printf("Don't do it bro, trust me. You know what I am talking about.\n");
             break;
     }
 

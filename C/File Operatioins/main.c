@@ -7,7 +7,7 @@ Terminology:
 
 (i) file stream : consider this well like a river, if you get me. But in seriousness
                   all a stream represents if something you write into, or read from
-                  it can stdin for readingf, stdout for writing, or a FILE pointer
+                  it can stdin for reading, stdout for writing, or a FILE pointer
 
 (ii) EOF (end of file) : kind of self explanatory, but it just means the ending of a file
 
