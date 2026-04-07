@@ -1,0 +1,23 @@
+What are header files actually?
+
+
+Well simply put they are normal C files the only difference being they have the .h extension instead of the normal .c extension.
+No I am not kidding, you can go ahead and try to name a C file with a .h extension and it will work, you can even include it using the
+#include statement in your normal .c files just like you do with files like stdio.h .
+
+
+A little disclaimer though, unlike the header files which come with the C compiler like stdio.h or stdlib.h and so on, to include
+header files which you make yourself, you need to provide the file path to them relative to the directory where your source code is.
+And also usually you include like this #include <stdio.h> but for custom header files you do like this #include "your_header_file.h", yeah you use
+quotes instead of <>.
+
+But what makes them different from normal .c files? Well aside from the extension it is the fact that they are used to fullfill function
+refrences or macro refrences (see notes). 
+
+If you have read the C compilation process then you know that there is a thing called a compiler, and the compiler needs to resolve function calls,
+if you only use functions which are defined in the same file then the compiler doesn't need to do anything else, but almost all the time you will
+use a library like stdio.h in your programs, and use the functions defined in those libraries.
+
+And so the compiler needs to know the function signature (see notes) in order to allow you to use those functions in your code. It doesn't need to know
+the actual function implementation (see notes), that is only required by the linker (see notes) or during runtime.
+

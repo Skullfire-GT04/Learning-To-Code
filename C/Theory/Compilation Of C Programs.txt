@@ -1,0 +1,61 @@
+Ok, compilation in simple terms means converting your code into binary instructions which can be run by the 
+computer's processor.
+
+And C is a compiled language, which means that it needs to compile your code before running it. Also called AOT compilation,
+or Ahead-of-Time compilation, which just means it compiles the whole source code and produces an executable.
+
+(P.S the other kind of compilations is called JIT compilation, or Just-in-time compilation, where the code is compiled line by line,
+as the program executes)
+
+Here is the general structure of how the compilation of a C program takes place.
+
+
+ Source Code --------------> Processed Code --------------> Assembly Code -----------> Object File(s) -------------> Executable
+
+             Pre-processor                     Compiler                     Assembler                      Linker
+
+
+Now don't worry I will explain each step in great detail (or so I hope).
+
+
+Pre-processor : What it does is basically prepared the code for the compiler, which means including all the header files, removing comments and 
+                full-filling macros (see other notes).
+
+                1st Task: The compiler needs to resolve function calls which are present in header files which we include at the top of our C programs
+                          like #include <stdio.h> (see notes).
+                
+                2nd Task: The comments you write in your code are removed because they are not valid syntax which the compiler recognizes.
+
+                3rd Task: If your code defines and uses macros then the pre-processor does text subsitution to fullfill those macros (see notes).
+
+
+Compiler : Turns the processed code into assembly code, it should be emphasized that the compiler doesn't require function definitions
+           it only needs the function declaration to know function signatures (see notes), the need for the actual implementation of functions
+           comes later.
+
+
+Assembler : This is a feature of the BIOS you can say, that is, it is specific to the CPU architecture, it is a translator for assembly code
+            into object files, which are essentially machine code (1s and 0s i.e. binary).
+
+
+Linker : It is the most important thing which actually allows you to use libraries in your C programs, as the name suggests it links multiple binary
+         files. These files contain function definitions and the actual source code of your program which have been turned into machine code.
+
+
+
+
+Now this was the general way of compiling C programs, but there is another way, which is conceptually the same but uses the concept
+of something called dynamic linking, instead of static linking.
+
+In other words, in the most general case, all the dependencies are packaged into the final executable by the linker, but in dynamic linking
+only the function names are packaged and there is a need to resolve dependencies during runtime, and that's where the concept of .so (shared object) or 
+.dll (dynamic link library) comes in.
+
+All that happens is that in the case of dynamic linking, when you run the program is either loads the dependencies from a .so or .dll file which needs to be 
+present somewhere in the project where your executable is.
+
+(P.S Windows uses .dll files but Linux and Mac use .so files)
+
+Dll or so files are just binary files which are loaded in memory during runtime by the executable when it needs to resolve function names.
+But other than that the compilation process is the same.
+
