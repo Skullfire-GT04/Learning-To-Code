@@ -11,11 +11,12 @@
 int main(){
 
     int age;
-    char name[20];
+    const int max_name_width = 20;
+    char name[max_name_width];
 
     printf("Welcome my boy, to the night club.\nBut before we begin I have to ask you some questions k?\n");
     printf("How old are you?: ");
-    scanf("%2d", &age);
+    scanf("%3d", &age);
 
     // this is how to use the if, else if, and else clauses in C
     
@@ -63,11 +64,13 @@ int main(){
             printf("Don't do it bro, trust me. You know what I am talking about.\n");
             break;
     }
-
+    getchar(); // to eat the newline entered during age input
     printf("Now you have to register in our system to allow you in.\n");
     printf("What's your name? :");
-    scanf("%20s", &name);
+    fgets(name, max_name_width, stdin);
     putchar('\n');
+
+    printf("Name entered : %-*s\n", max_name_width, name);
 
     FILE* names = fopen("names.txt", "r");
 
@@ -75,9 +78,10 @@ int main(){
 
     // reading all the names in the names.txt file
 
-    char buf[20];
+    char buf[max_name_width];
     while(fgets(buf, sizeof(buf), names) != NULL){
         buf[strcspn(buf, "\n")] = '\0';
+        printf("buf : %s\n", buf);
         if(!strcmp(buf, name)){
             registered = 1;
             break;

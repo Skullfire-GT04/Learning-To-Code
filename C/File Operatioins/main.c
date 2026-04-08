@@ -108,6 +108,5 @@ int main(){
     }else{
         printf("Successfully removed file.\n");
     }
-    
-    return 0;
+        return 0;
 }

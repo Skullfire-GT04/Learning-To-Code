@@ -1,0 +1,18 @@
+Functions are the most basic building block of any application or program, so it is only fair that they get a good 
+explanation, and this explanation doesn't just apply to functions in C but just functions in programming in general.
+
+A function is just a block of code which can be executed when the function is called. They were introduced in programming because
+it didn't make sense to write the same code in different places again and again, it was both in-efficient and primitive to do so.
+
+
+Now functions in C and most other programming languages are supposed to be unique. But in most modern programming languages, there is a concept
+of function overloading. But since C doesn't allow function overloading, it is superflous to learn about it, but meh here you go.
+
+Function overloading is when you define multiple functions with the same name which perform different things.
+It is possible to define many functions with the same name because as long as the function signature is unique the language will allow for the name to be the same.
+
+Function Signature: The combination of the return type, the name and the parameters of a function constitues the function signature, it is a way of uniquely
+                    identifying functions for the compiler. In C even if the function signature is different, two functions cannot share the same name.
+
+
+Function Definition/Implementation: It is the actual code which the function represents when it is called.

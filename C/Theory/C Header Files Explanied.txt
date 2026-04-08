@@ -19,5 +19,5 @@ if you only use functions which are defined in the same file then the compiler d
 use a library like stdio.h in your programs, and use the functions defined in those libraries.
 
 And so the compiler needs to know the function signature (see notes) in order to allow you to use those functions in your code. It doesn't need to know
-the actual function implementation (see notes), that is only required by the linker (see notes) or during runtime.
+the actual function implementation (see notes), that is only required by the linker (see notes) during compilation or during runtime.
 
