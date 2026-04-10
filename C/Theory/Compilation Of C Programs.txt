@@ -56,6 +56,6 @@ present somewhere in the project where your executable is.
 
 (P.S Windows uses .dll files but Linux and Mac use .so files)
 
-Dll or so files are just binary files which are loaded in memory during runtime by the executable when it needs to resolve function names.
+Dll or .so files are just binary files which are loaded in memory during runtime by the executable when it needs to resolve function names.
 But other than that the compilation process is the same.
 

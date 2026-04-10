@@ -38,3 +38,16 @@ Using Macros in other ways.
 
 Since all the #define command does, is tell the pre-processor to replace a word with the value you provide after.
 You can use this to your advantage for making some pretty generic functions.
+
+Like if you did something like 
+#define HELLO printf("Hi there!\n");
+
+and then just used it in your code like so;
+
+int main(){
+    HELLO     <-------- Notice you don't need a semicolon at the end
+    return 0;
+}
+
+the pre-processor would replace the word HELLO with the code printf("Hi there.\n");
+and so in this way you can create some powerful functions which are generic in nature. (see notes)

@@ -15,4 +15,5 @@ Function Signature: The combination of the return type, the name and the paramet
                     identifying functions for the compiler. In C even if the function signature is different, two functions cannot share the same name.
 
 
-Function Definition/Implementation: It is the actual code which the function represents when it is called.
+Function Definition/Implementation: It is the actual code which the function represents when it is called. Like the actual logic which is implemented behind every
+                                    function call.
