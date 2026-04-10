@@ -67,3 +67,24 @@ float a = add(12.31, 32.32)
 so you see, unlike normal functions which only take in a particular type of arguments and return only a single type, macros can act as 
 generics function which take in any input and return any output, because all you are doing is replacing text, its just that you can give macros
 input and make them behave as functions
+
+
+Now onto Pre-processor directives, or orders for the pre-processor.
+
+See the pre-processor is really powerful because it can change your code automatically based on the directives (orders) you give it. This 
+process of changing your code dynamically is called conditional compilation btw.
+And what are these orders specifically? Well there are a couple of them, so get ready for a ride.
+
+1 #if : it works like a normal 'if' clause, the only difference being it is meant for the pre-processor instead of the compiler.
+
+2 #endif : everytime you use a #if or #ifndef (see below) or #ifdef (see below) directive you need to add this directive at the end of 
+           the directive to mark the end of the directive, otherwise the pre-processor won't know where to stop.
+    
+3 #elif : this is the quivalent of an 'if else' clause 
+
+4 #else : this is the equivaled of the 'else' clause
+
+5 #ifdef : this one is different from the #if directive because it checks for macros instead of expressions, and it stands for 'if defined'
+
+6 #ifndef : this one if the opposite of #ifdef and the code in this clause gets included if the macro whose existence it checks 
+            does not exist, it stands for 'if not defined'

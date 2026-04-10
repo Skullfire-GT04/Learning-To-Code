@@ -6,15 +6,16 @@
 // look at the pre-processed version of this code in this folder to see how the 
 // pre-processor turns this code code into a simpler version, i.e. resolves the macro references
 
-#define PI 3.14159265359
+#define PI 3.14159265359 // this is how you define macros
 
-#define COMP(x, y) (x) > (y) ? (x) : (y)
+#define COMP(x, y) (x) > (y) ? (x) : (y) // this is how you make genric function like macros
 
 
 float calc_area(float radius){
     return PI * powf(radius, 2);
 }
 
+#undef PI // this is how you undefine macros
 
 int main(){
 
