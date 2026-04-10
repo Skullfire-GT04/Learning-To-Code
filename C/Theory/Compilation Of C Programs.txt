@@ -4,9 +4,6 @@ computer's processor.
 And C is a compiled language, which means that it needs to compile your code before running it. Also called AOT compilation,
 or Ahead-of-Time compilation, which just means it compiles the whole source code and produces an executable.
 
-(P.S the other kind of compilations is called JIT compilation, or Just-in-time compilation, where the code is compiled line by line,
-as the program executes)
-
 Here is the general structure of how the compilation of a C program takes place.
 
 
