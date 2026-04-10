@@ -51,3 +51,19 @@ int main(){
 
 the pre-processor would replace the word HELLO with the code printf("Hi there.\n");
 and so in this way you can create some powerful functions which are generic in nature. (see notes)
+
+Like so 
+
+#define add(x, y) x + y
+
+so now, you can use this as a function in your code like so
+
+int a = add(1, 2);
+
+or
+
+float a = add(12.31, 32.32)
+
+so you see, unlike normal functions which only take in a particular type of arguments and return only a single type, macros can act as 
+generics function which take in any input and return any output, because all you are doing is replacing text, its just that you can give macros
+input and make them behave as functions
