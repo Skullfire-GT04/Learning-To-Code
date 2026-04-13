@@ -1,0 +1,38 @@
+This section will not cover any C specific memory concepts, but it will cover the concepts of computer
+memory in general, so the next time your coder friends talk about this stuff you won't feel like a dum-dum.
+
+Ok well first let's talk about what memory means in the context of a computer program. There are two kinds of memory
+we talk about when concerning ourselves with programs:
+(i) Storage : the memory here means how much storage a pc has
+(ii) RAM : the memory here means the RAM (Random Access Memory) which is available for a program to use
+
+Generally and usually the storage is never the problem, because storage is cheap, but RAM is not. There is a reason 
+why computers have terabytes of memory but only a few gigabytes of RAM but still be able to function.
+
+When talking about memory in programming you will most likely be talking about RAM, because as I said storage is cheap.
+And I don't just mean the price (though RAM prices are pretty high today), but the actual difference in the amount of RAM and storage.
+RAM is the thing where programs are copied from storage to be loaded into the CPU or GPU and then executed, so in a sense you have to make
+sure that your programs use memory efficiently. 
+
+Now I don't know much about how memory is structured in storage but I do know how memory is structured in RAM, and so should you.
+Memory in RAM is made up of cells with addresses, these cells in reality are just capacitors which store electricity, when they have
+energy stored inside them, they represent a binary 1 otherwise if empty, they represent a binary 0.
+
+Now the process of how RAM is made, accessed, read from, and wrote into is too complex and unnecessary for programmers to know, unless
+you want to design RAM yourself. If not then I would recommend you to not dwell on the specifics for too long. All you need to know as a programmer
+is that memory should we used wisely.
+
+Structure of RAM:
+________________________
+|_Cell_____|__Address__|
+|_01001111_|__0x12344__|
+|_10010101_|__0x12345__|
+|_01010111_|__0x12346__|
+|_10101011_|__0x12347__|
+    .           .
+    .           .
+    .           .
+    .           .
+
+A single cell holds 1 byte of data, a byte is made up of 8 bits, a single bit is represented by a single capacitor and is the base unit
+of memory. No matter how much I try to explain any further, there is not much more to memory than that.

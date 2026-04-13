@@ -2,6 +2,14 @@
 #include <string.h>
 
 /*
+
+What is a function in the first place?
+
+Well in terms of memory a function is just a pointer to a block of code
+in data, so you can pass function as pointers as arguments to other functions
+(see pointers notes).
+
+
 A user-defined function needs three things
 (i) A name
 (ii) A return type
