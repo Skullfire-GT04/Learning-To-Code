@@ -84,6 +84,19 @@ public class Main{
 
         if(same) System.out.println("The code worked!");
 
+        // converting to lower case or uppercase
+        String upperSentence = sentence.toUpperCase();
+        String lowerSentence = sentence.toLowerCase();
+
+        System.out.println("Upper Cased sentence: " + upperSentence);
+        System.out.println("Lower Cased Senetence: " + lowerSentence);
+
+        boolean still_same = upperSentence.equalsIgnoreCase(lowerSentence); // checks if the two strings are equal regarless of the capitalization
+
+        System.err.println("Lower Sentence == Upper Sentence (without case checking): " + still_same);
+
         Character cha = 'a'; // out of all the advanced or reference data types, this one is the most superflous one in my opinion       
+        // because you don't really use it for much, at least in my experience
+        
     }
 }

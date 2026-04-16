@@ -13,7 +13,12 @@ It is possible to define many functions with the same name because as long as th
 
 Function Signature: The combination of the return type, the name and the parameters of a function constitues the function signature, it is a way of uniquely
                     identifying functions for the compiler. In C even if the function signature is different, two functions cannot share the same name.
+                    In other languages, if the compiler/interpreter allows it, you can overload functions (see below).
 
 
 Function Definition/Implementation: It is the actual code which the function represents when it is called. Like the actual logic which is implemented behind every
                                     function call.
+
+
+Function Overloading: When you write two seperate functions with different signatures but the same name, it is called function overloading. It is a technique
+                      used to make generic function names for statically types languages like C++, Java, Rust and so on. 
