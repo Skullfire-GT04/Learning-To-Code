@@ -22,3 +22,18 @@ Function Definition/Implementation: It is the actual code which the function rep
 
 Function Overloading: When you write two seperate functions with different signatures but the same name, it is called function overloading. It is a technique
                       used to make generic function names for statically types languages like C++, Java, Rust and so on. 
+
+
+Generic Functions: When working with statically typed languages, it is really hard to define an algorithm which works for all types of data, because the 
+                   functions only take in a particular type of data as input arguments. And that results into programmers needing to create different functions
+                   with different names for the same purpose essentially. And that's where the need for generic functions come in. The word generic means 'something 
+                   in general, or average', and that's what these functions are. They can take any type of input arguments, hence eliminating the need for 
+                   different functions.
+
+                   Like, in python a genric function would look like:
+
+                   def add(a, b): 
+                        return a + b
+
+                   here a, b can be integers, string, float or anything. But if we were to define the same function in C or any other statically typed language
+                   we would need to define a sperate function for each data type.

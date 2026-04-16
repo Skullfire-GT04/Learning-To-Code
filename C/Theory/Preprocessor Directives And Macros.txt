@@ -1,6 +1,6 @@
 What is a pre-processor? 
 
-If you haven't read the notes on C compilation process, then here is a reminder. It removed comments, copies all the code 
+If you haven't read the notes on C compilation process, then here is a reminder. It removes comments, copies all the code 
 in the header files you included at the top of your C program into your source code and fullfills macros, or otherwise known as 
 pre-processor directives, which is just a fancy word for "orders".
 
@@ -24,7 +24,7 @@ float area(float radius){             After Pre-processor    float area(float ra
     return PI * pow(radius, 2);      -------------------->      return 3.1416251 * pow(radius, 2);
 }                                                            }
 
-The above define function uses PI to calculate the area of a circle, after you pass your code to the 
+The above defined function uses PI to calculate the area of a circle, after you pass your code to the 
 pre-processor the function will look like shown above.
 
 This is what I meant when I said the pre-processor is responsible for text-subsitution for fullfilling macros in a C program.

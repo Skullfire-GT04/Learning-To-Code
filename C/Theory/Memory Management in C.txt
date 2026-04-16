@@ -1,0 +1,10 @@
+The reason C is still alive to this day, and hasn't been bear in terms of raw performance capabilities, despite being one of the
+oldest programming languages, is solely because of the fact that C provides more memory control than any other language. That and also because
+it is incredibly simple and the compiler optimization for C code has become better and better, but meh we are here to talk about memory.
+
+When it comes to actually knowing what memory management is, you need to know something. The fact that memory needs to be managed in the first place
+is because it doesn't happen automatically, like in other languages like Python or Java. There is something called a 'Garbage Collector' in modern programming
+languages, whose job is to do what we have to do manually in C.
+
+But because of the very fact that modern languages use a garbage collector, they are much slower than C. Now what exactly is a garbage collector, and what is 
+the process garbage collecting in the first place then just look into Generic Concepts folder.
