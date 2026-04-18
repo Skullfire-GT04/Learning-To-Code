@@ -7,10 +7,11 @@ basically the OS (operating system) assigns a region in RAM for each program to 
 
 (i) Text-segment: this section in memory contains the actual code, of course it doesn't contain words but binary equivalent of the code you write.
 
-(ii) Global Section: it contains the global variables, or the closures (see notes) declared in code.
+(ii) Global Section: it contains the global/static variables
 
 (iii) Stack: this is where all the function calls are are resolved, all the variables declared in a function are stored here. It also stores other things
              but that is the main thing which is stored here.
 
 (iv) Heap: This section is used when the program runs out of memory in stack (Remember StackOverflow Errors), variables stored here persist even after
-           the command is shifted from the calling function.
+           the command is shifted from the calling function. Or you just use this (if you can) to store variables that you want to use later, closure variables
+           are also stored here (See notes).

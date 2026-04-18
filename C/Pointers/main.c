@@ -1,8 +1,6 @@
 #include <stdio.h>
 
 
-int main(){
-
     // pointers are variables which store addresses (that's it)
 
     /*
@@ -18,10 +16,10 @@ int main(){
     There is a formula for finding out the data type of the address of any type of variable, which is:
     data type of address = data type of variable + '*'
 
-    so an int* address's data type would be int* + * = int** also called a double pointer.
+    so an int* variable's address data type would be int* + * = int** also called a double pointer.
 
     Although I should tell you, there is no textbook which describes a formula for doing so, this is something I came up
-    with a whim becuase I thought double pointers, triple pointers and so on were kind of confusing.
+    on a whim because I thought double pointers, triple pointers and so on were kind of confusing.
 
     The reason for why you need to have double pointers and so on in the first place is because the compiler needs to know
     how many times you can de-reference a pointer.
@@ -38,6 +36,8 @@ int main(){
     If the data-type has a single '*' then you can de-reference it once, if it has two '*' then you can do it twice and so on.
 
     */
+
+int main(){
 
     // Like
 
@@ -72,13 +72,17 @@ int main(){
     int* s = 12344; // this is illegal
     // int* t = &123; this is also illegal
 
-    // let's talk about pointer arethematic
+    // let's talk about pointer arithmetic
 
     p++; // increases the pointer by sizeof(int) instead of 1
     // because p is an int pointer
 
     // or something like this, it doesn't increment the pointer, just accesses the variable next to it
     *(p + 1); 
+
+    // pointer arithmetic becomes important when concerning arrays, but that is not the topic for now (see notes)
+    // just remember, whenever you increment/decrement a pointer, it gets incremented by the sizeof(data-type) * i
+    // where the data-type is the data-type to which the pointer is pointing to
 
     return 0;
 }
