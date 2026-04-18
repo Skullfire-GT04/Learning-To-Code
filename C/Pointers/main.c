@@ -1,5 +1,20 @@
 #include <stdio.h>
 
+// see usage below
+void foo(){
+    printf("foo\n");
+}
+
+// see usage below
+int add(int a, int b){
+    return a + b;
+}
+
+// see usage below
+void printAdd(int (*f) (int, int), char* prompt, int a, int b){
+    printf("%s : %d\n", prompt, (*f)(a, b));
+}
+
 
     // pointers are variables which store addresses (that's it)
 
@@ -82,7 +97,96 @@ int main(){
 
     // pointer arithmetic becomes important when concerning arrays, but that is not the topic for now (see notes)
     // just remember, whenever you increment/decrement a pointer, it gets incremented by the sizeof(data-type) * i
-    // where the data-type is the data-type to which the pointer is pointing to
+    // where the data-type is the data-type to which the pointer is pointing to and 'i' is the factor by which you are incrementing/decrementing the pointer
+
+    // But pointers can point to complex data types as well, like structs.
+
+    struct Person{
+        char* name; // you can use pointers inside a struct as attributes
+        int age;
+    } person1, person2, *personPtr;
+
+    // in the above code person1 and person2 are normal variables of type struct Person, whereas *personPtr 
+    // is a pointer to a data-type of struct Person
+
+    person1.name = "John Doe";
+    person1.age = 22;
+
+    // you can use the personPtr to point to person1 like so
+
+    personPtr = &person1;
+
+    // now to access the attributes stored inside person1 through personPtr, you do something like this
+
+    personPtr->name; // this is called the arrow notation
+    // or something like this
+    (*personPtr).name; // here you de-reference the pointer first, then access the 'name' property
+
+    // here you can check it like so
+
+    printf("person1.name: %s, personPtr->name: %s\n", person1.name, personPtr->name);
+
+    // you can use the pointer to set properties like so
+    personPtr->age = 22;
+
+
+    // Now onto one of the most powerful form of pointers
+
+    // Function pointers
+
+    /*
+        A function in memory is stored in the text-section (see notes), but what exactly does it mean to store a function?
+        All a function is, is a set of instructions for the CPU in binary. And it is stored at a particular address like any other
+        variable, hence you can make pointers point at functions.
+
+
+        But you cannot do something like, 
+
+        void fun(){}
+
+        void* funPtr = &fun;  
+
+        this doesn't work, like you expect it to.
+
+        There are two problems with this approach:
+        (i) You don't need to add the '&' symbol in front of the function name. Technically the function name itself
+            is a pointer
+        (ii) The type of pointer cannot be something random, it needs to match the function signature (see notes).
+
+        The second problem is something I shall address,
+
+        the format for defining a function signature as a data-type is as follows:
+
+        return-type (*ptrName) (arguments);
+    */
+
+    // so if you want a pointer to the function foo defined above, the syntax would look something like so
+    
+    void (*fooPtr) () = foo;
+
+    // now you can use fooPtr like the function foo 
+    (*fooPtr)(); // you first de-reference the pointer, then call it
+
+    // similarly for the add function
+
+    int (*addPtr)(int, int) = add;
+    printf("2 + 2 : %d\n", (*addPtr)(2, 2));
+
+    // you can even pass function pointers as arguments to other functions like so
+    // Like so
+    printAdd(add, "3 + 3", 3, 3);
+
+    // if you try to pass the addPtr to printAdd, it will work, because it will be pointer to add, and add itself is a pointer too
+    printAdd(addPtr, "4 + 4", 4, 4);
+
+    // you can have function pointers as attributes in structs too, like so
+
+    struct Sales{
+        int start_year;
+        int end_year;
+        float sales_per_month[100];
+        float (*profit)(float* , size_t); // this is a function pointer named 'profit'
+    };
 
     return 0;
 }
