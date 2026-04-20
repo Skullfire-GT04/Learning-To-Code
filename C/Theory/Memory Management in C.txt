@@ -1,4 +1,4 @@
-The reason C is still alive to this day, and hasn't been bear in terms of raw performance capabilities, despite being one of the
+The reason C is still alive to this day, and hasn't been beat in terms of raw performance capabilities, despite being one of the
 oldest programming languages, is solely because of the fact that C provides more memory control than any other language. That and also because
 it is incredibly simple and the compiler optimization for C code has become better and better, but meh we are here to talk about memory.
 

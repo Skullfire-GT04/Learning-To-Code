@@ -10,8 +10,20 @@ basically the OS (operating system) assigns a region in RAM for each program to 
 (ii) Global Section: it contains the global/static variables
 
 (iii) Stack: this is where all the function calls are are resolved, all the variables declared in a function are stored here. It also stores other things
-             but that is the main thing which is stored here.
+             but that is the main thing which is stored here. This memory is static in size and is fixed during runtime.
 
 (iv) Heap: This section is used when the program runs out of memory in stack (Remember StackOverflow Errors), variables stored here persist even after
            the command is shifted from the calling function. Or you just use this (if you can) to store variables that you want to use later, closure variables
-           are also stored here (See notes).
+           are also stored here (See notes). This type of memory is dynamic in size and can be changed during runtime.
+
+
+The garbage collector or the GC of any language does only one thing, when variables are no longer in use it deletes it from memory, so that other
+variables which are in use may use the freed memory.
+
+
+Memory Management in the Stack
+
+When a function is called or a line of code is executed, the variables which the line of code declares is stored in the Stack.
+If a function is called, there is something called a Stack-Frame which is created, fixed in size.
+
+Like say you have the following function 
