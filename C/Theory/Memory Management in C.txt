@@ -3,8 +3,62 @@ oldest programming languages, is solely because of the fact that C provides more
 it is incredibly simple and the compiler optimization for C code has become better and better, but meh we are here to talk about memory.
 
 When it comes to actually knowing what memory management is, you need to know something. The fact that memory needs to be managed in the first place
-is because it doesn't happen automatically, like in other languages like Python or Java. There is something called a 'Garbage Collector' in modern programming
+is because it doesn't happen automatically, like in other languages like Python or Java. There is something called a 'Garbage Collector' (see notes) in modern programming
 languages, whose job is to do what we have to do manually in C.
 
 But because of the very fact that modern languages use a garbage collector, they are much slower than C. Now what exactly is a garbage collector, and what is 
 the process garbage collecting in the first place then just look into Generic Concepts folder.
+
+If you already know what memory management is and what is the job of the Garbage Collector, then you can continue. Since C doesn't provide a GC (Garbage Collector) 
+all the memory we use in the heap needs to be managed manually. This gives us power to write really fast programs, but also introduces many problems.
+You can check the Generic Concepts folder for the problems a manual memory management system has to offer. 
+
+But for right now the main topic is how to use the heap memory in C manually:
+
+The C standard library or <stdlib.h> provides four functions which are used to mange memory in C:
+
+(i) malloc: it stands for "memory allocation", and it does exactly that. When you call this function it takes in a non-negative integer value
+            which represents the number of bytes you want to allocate in the heap, then it returns a pointer to the start of the allocated memory.
+
+            So something like this:
+
+            int* pInt = (int*) malloc(4);  
+
+            in the above code we are allocating 4 bytes in the heap.
+
+
+(ii) calloc: it stands for "contiguous allocation", and works similarly to malloc, the only difference being it initializes the memory allocated to zero
+             and takes in two inputs. The first one is the size of a single unit of memory, and the other is the number of units you want to allocate.
+             So something like this:
+
+             int* pInts = (int*) calloc(sizeof(int), 10);
+                            ^
+                            |
+                        (you have to cast the pointer)
+
+            in the above code you are allocating memory in the heap with a size of : sizeof(int) (4 bytes) * 10 = 40 bytes
+
+            Calloc is mostly used to allocate memory for arrays.
+
+
+(iii) realloc: it stands for "reallocate", and it does exactly that. It takes a pointer to a memory section in the heap and then reallocates
+               the memory in it. It also copies the data that was stored in the previous block of memory into the new block, as long as the new block
+               can accommodate the previous data, i.e. if the new allocated memory is less than the previous one, then only that much data will be copied
+               which can be fit into the new smaller memory. All the data is copied if the new memory section is greater than or equal to (in size) the old
+               memory section.
+
+               So something like this:
+
+               int* pInts = (int*) calloc(sizeof(int), 10); <--- allocating 10 int elements in the heap
+               pInts = (int*) realloc(pInts, sizeof(int) * 8); <--- the last two elements are lost after reallocating to 8 int elements
+
+(iv) free: it frees the memory which has been allocated in the heap and gives it back to the program. It takes in the pointer to the memory as input.
+           So something like this:
+
+           int* pInt = malloc(8); <---- allocating memory
+
+           .
+           .
+           .
+
+           free(pInt); <---- freeing memory

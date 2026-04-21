@@ -40,7 +40,7 @@ int main(){
     printf("a: %d\n", a);
 
     // you can check that the name of an array is just a pointer like so
-    printf("integers: %d, &integers[0]: %d\n", integers, &integers[0]);
+    printf("integers: %p, &integers[0]: %p\n", integers, &integers[0]);
 
     // here is how you can make an array in the heap (see notes)
     int* pInts = (int *) malloc(sizeof(int) * 10);
@@ -67,7 +67,21 @@ int main(){
     printf("Initialization using calloc:\n");
     for(int i = 0; i < 10; i++){
         printf("pFloats[%d]: %f\n", i, pFloats[i]);
+        *(pFloats + i) = i;
     }
+
+    // let's see realloc in action here
+
+    pFloats = (float*) realloc(pFloats, sizeof(float) * 12); // here we are reallocating the memory of pFloats from 10 to 12 elements
+
+    // let's check if the data was copied properly
+
+    printf("After reallocation:\n");
+    for(int i = 0; i < 12; i++){
+        printf("pFloats[%d]: %f\n", i, pFloats[i]);
+    }
+
+    // you will see that the data was copied properly
 
     free(pInts);
     free(pFloats);

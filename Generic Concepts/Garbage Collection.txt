@@ -26,4 +26,32 @@ Memory Management in the Stack
 When a function is called or a line of code is executed, the variables which the line of code declares is stored in the Stack.
 If a function is called, there is something called a Stack-Frame which is created, fixed in size.
 
-Like say you have the following function 
+Like say you have the following function in python:
+
+
+def do_something():
+    a = 1
+    b = 2
+    print(f"a + b: {a + b}")
+    
+
+When the above function is called it will create its own stack-frame in the stack section of the memory which will look like this:
+
+_________________________
+|         STACK         |
+|_______________________|                       
+|do_something()         |
+| a = 1  b = 2          | <--------- a stack-frame holding two variables         
+|_______________________|                       
+
+When a function ends all the memory used in the stack frame is freed and given back to the program automatically.         
+
+
+Memory Management in the Heap
+
+This is where the job of the garbage collector begins, you see unlike the stack section of the memory, the heap doesn't automatically
+gets its memory freed if the variables stored in it are no longer in use. Its the job of the garbage collector to clear memory in the heap,
+if the language you are using doesn't have a garbage collector like C or C++ then it is the job of the programmer to do so.
+
+But humans can make mistakes, and so languages where the programmer manages memory manually are usually considered unsafe, but really fast.
+That is because the garbage collector induces additional runtime overhead in a program which slows down operations.
