@@ -1,0 +1,13 @@
+When using memory in dynamic memory (heap), it is really important that you never use uninitialized variables.
+Because they contain garbage values, and using them result in undefined behavior.
+
+Like in C:
+
+int* pInt = malloc(4);
+
+We have not set a value to pInt explicitly, and if we use it in an expression like so:
+
+int a = *pInt + 10;
+
+Then the result will be undefined since the value of pInt will be some garbage value.
+So in order to write memory safe code it is important to never use uninitialized variables in functional code.

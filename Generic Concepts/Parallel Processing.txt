@@ -1,0 +1,13 @@
+Since the advent of advanced CPU manufacturing techniques it has become the norm to package multiple CPU cores in a single chip.
+This just means that a single chip can do multiple tasks at once. Though it should be made clear that, a single core itself can do multiple
+tasks in itself.
+
+But anyway the topic is parallel processing, in programming to do multiple tasks in parallel there is literally only one way. To use the concept of 
+threading. (This is not a knitting class)
+
+A thread represents a task or process which a CPU core executes, when buying CPU chips they will often lists the amount of cores and threads, this is what
+they mean by 'threads' in the description. When trying to do multi-processing you make multiple threads and assign them each a task to fullfil (usually a function),
+and then start the thread.
+
+Every programming language implements threading in its own way but the concept is the same.
+

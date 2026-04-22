@@ -1,0 +1,17 @@
+Not to be confused with parallel processing, concurrency is a completely different concept. Though it aims to achieve the same effect as 
+using multiple threads (see notes), but in reality it only uses a single thread. 
+
+If parallel processing can be thought of as many chefs in a kitchen working in unison to make a dish, concurrency can be thought of as a single chef
+cutting the vegetables, boiling the water, cracking the eggs and so on.. at the same time. When the water is boiled he puts the vegetables into the water 
+and then continue with some other task.
+
+Basically the program executes only a single thing at a time, but it maintains a list of on-going tasks, these tasks are put on hold because of reasons, 
+and when the program is ready to continue with a task, it continues from where it left off. 
+
+The actual implementation of which tasks are prioritized is decided by the programming language, but they usually follow a LIFO (Last-In-First-Out) kind of 
+priority system.
+
+This system of execution enables programs to post-pone tasks for later while performing other necessary tasks, like say you are making an app where the user
+has to login every time they open the app. Now in the code you write you could make it so that as long as the user doesn't enter their credentials all other tasks
+stop, like loading the GUI (Graphical User Interface) or loading some data from a server. But with concurrency you can do all those other things while waiting for 
+user input.

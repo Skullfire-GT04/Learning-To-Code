@@ -1,5 +1,7 @@
 package Java.Scopes;
 
+import Java.Scopes.A;
+
 public class Main {
     public static void main(String[] args) {
 //  ^^^^^^
@@ -9,6 +11,12 @@ public class Main {
         Well, you see programs are not like people. That is they are not open for everyone,
     or other programs more specifically. And that is done because you want to protect some programs
     from being accessed by other programs. 
+
+    That's where the concept of scoping (not like in COD) comes in, and btw scopes apply not only to 
+    classes, but also to functions and variables.
+
     */
+
+    A.a();
     }
 }

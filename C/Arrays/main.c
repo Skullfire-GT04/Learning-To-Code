@@ -60,7 +60,7 @@ int main(){
     // you can check it like so
     printf("pInts[4]: %d, *(pInts + 4): %d\n", pInts[4], *(pInts + 4));
 
-    // when you use calloc instead of malloc, it initalizes all the elements to zero
+    // when you use calloc instead of malloc, it initializes all the elements to zero
     float* pFloats = (float*) calloc(sizeof(float), 10);
 
     // here let's check

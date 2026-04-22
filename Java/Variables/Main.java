@@ -72,7 +72,7 @@ public class Main{
 
         // the split function
         String sentence = "This is a sentence.";
-        String[] words = sentence.split(" "); // this functions splits a string by a delimeter you pass into the function as argument
+        String[] words = sentence.split(" "); // this functions splits a string by a delimiter you pass into the function as argument
         for(String word : words) System.out.println(word);
 
         // the charAt function
@@ -80,7 +80,7 @@ public class Main{
 
         // the equality checker and the join function
         boolean same = sentence.equals(String.join(" ", words)); // the join function does the opposite of the split function
-                                                                           // and joins an array seperated by a delimeter
+                                                                           // and joins an array separated by a delimiter
 
         if(same) System.out.println("The code worked!");
 
@@ -89,13 +89,13 @@ public class Main{
         String lowerSentence = sentence.toLowerCase();
 
         System.out.println("Upper Cased sentence: " + upperSentence);
-        System.out.println("Lower Cased Senetence: " + lowerSentence);
+        System.out.println("Lower Cased Sentence: " + lowerSentence);
 
-        boolean still_same = upperSentence.equalsIgnoreCase(lowerSentence); // checks if the two strings are equal regarless of the capitalization
+        boolean still_same = upperSentence.equalsIgnoreCase(lowerSentence); // checks if the two strings are equal regardless of the capitalization
 
         System.err.println("Lower Sentence == Upper Sentence (without case checking): " + still_same);
 
-        Character cha = 'a'; // out of all the advanced or reference data types, this one is the most superflous one in my opinion       
+        Character cha = 'a'; // out of all the advanced or reference data types, this one is the most superfluous one in my opinion       
         // because you don't really use it for much, at least in my experience
         
     }

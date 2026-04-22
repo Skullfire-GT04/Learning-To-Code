@@ -9,9 +9,9 @@ and the word super refers to the parent class, if it exists.
 
 
 You always need to provide the 'self' argument to all the methods in a class in Python,
-so that you can use the refrence to the current object to do some logic idk.
+so that you can use the reference to the current object to do some logic idk.
 
-Btw everytime an object calls any of its methods, it passes itself as an argument
+Btw every time an object calls any of its methods, it passes itself as an argument
 to the function call automatically, so you don't need to pass in the object reference manually
 """
 
@@ -59,7 +59,7 @@ class Dog(Animal):
 
 dog1 = Dog("Timmy")
 print(f"The name of the dog1 is {dog1.name}")
-dog1.talk() # as you can see the methods were overriden successfully
+dog1.talk() # as you can see the methods were overridden successfully
 dog1.walk()
 
 """
