@@ -1,0 +1,26 @@
+When more than one process (threads) try to change data, it results into something called 'data race'.
+It happens because of a-synchronization of the processes. Like say you write a process to read data and one to write data into a file.
+If the CPU executes the process of reading the file first v/s if the write operation is executed first, it will result in different outputs.
+
+Which is not something you want as a programmer, whenever you write code you want it to behave in a predictable way, and in a way in which you intended
+it to work.
+
+Formally a data race is defined as follows: Whenever two or more processes access the same dataset where at least one of the process is changing the data
+                                            it results in a data race.
+
+You can prevent data races by making sure one process is always executed before all the others, i.e giving tasks a priority. But the best practice is to make 
+sure you don't have multiple processes working on a single dataset if even one of them is writing into the dataset. You can have multiple read operations 
+on a dataset though.
+
+Like say you have the following two functions:
+
+x = 1
+def func1():
+    print(x)
+
+def func2():
+    x += 1
+
+If func1 executed before func2, then you will get an output of '1' whereas if the opposite happens, then you will get an output of '2'.
+This is a very simple example of a data race, and they can get more complicated depending on the number of processes currently working on the same data, 
+and the complexity of the operations themselves.
