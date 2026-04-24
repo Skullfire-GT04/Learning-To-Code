@@ -22,9 +22,9 @@ int main(){
     The difference between the first method and the other two is the, in the first method we are not initializing the array
     with any elements, whereas we are doing so in the other two.
 
-    The difference between the second and thrid method is that, you can intialize any number of elements in the second one as long as 
+    The difference between the second and thrid method is that, you can initialize any number of elements in the second one as long as 
     they are less than or equal to the size passed into the 'size' argument during array declaration. Whereas in the third method, the 
-    number of elements you intialize becomes the total size of the array.
+    number of elements you initialize becomes the total size of the array.
 
     In C array names are just pointers (see notes), they point to the first element of the array
 

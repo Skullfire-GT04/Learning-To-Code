@@ -27,7 +27,7 @@ int main(){
     // here is how you can initialize structs 
     struct Person person1 = {"Alan Michael", 21};
 
-    // here is how you initalize a struct object without specifying all the attributes
+    // here is how you initialize a struct object without specifying all the attributes
     struct Person person2 = {"George Washington"};
 
     // you can set the properties later using the dot notation like so

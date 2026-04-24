@@ -1,7 +1,4 @@
-package Java.Inheritance;
-
-import Java.Inheritance.Dog;
-import Java.Inheritance.Wolf;
+package Java.OOP.Inheritance;
 
 public class Main {
 

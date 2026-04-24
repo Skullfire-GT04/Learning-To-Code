@@ -1,4 +1,4 @@
-package Java.Inheritance;
+package Java.OOP.Inheritance;
 
 // this represents the parent class for the dog child class
 

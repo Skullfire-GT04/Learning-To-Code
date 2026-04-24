@@ -1,0 +1,45 @@
+There is something common to all programming languages, that is they are not written in binary (natively), unless you are explicitly a psycho who writes in binary.
+Which means there needs to be a way to turn the code you write in human readable format into something the computer can understand, which just means, a way to 
+turn source code into binary.
+
+That is where something called a compiler, an interpreter or a VM (Virtual Machine) comes in. The specifics are not so important but the main thing is that
+they convert code to binary. There maybe several steps in between, but the result is always the same.
+
+But how is the process of turning source code to machine code (binary) different for different languages?
+
+Well you see, some languages transform the source code to binary straight away, while some only do so when the program is run. The languages
+which transform the code straight away are called 'Compiled Languages' and the ones which are only transformed when the program is run 
+are called 'Interpreted Languages'.
+
+Compiled Languages like C, C++, Rust and so on use the principle of AOT compilation, AOT stands for Ahead-of-time. Which makes sense since they compile 
+the source code in advance, before the program is run. So you can say that, "The code is compiled ahead of time, before the program is run", hence the name
+AOT compilation.
+
+Interpreted Languages like Java, Python and so on use the principle of JIT compilation, JIT stands for Just-In-Time, which also makes sense since 
+the code is only compiled right before the code is ran by the CPU, so in a sense you can say, "The code is compiled to binary just in the nick of time".
+Hence the name JIT compilation.
+
+
+AOT Compilation details:
+
+There is usually a lot of in-between steps before the compiler actually compiles the code into assembly code, and then an assembler converts the 
+assembly code into machine code (binary). Usually such languages are faster since all of the code is pre-compiled and ready to run, but they often
+have slower start-up time since the whole executable binary file needs to be loaded into memory before running the program.
+
+But since AOT languages produce executables specific to a machine, the same executable cannot be distributed to be run everywhere. The whole program
+needs to be recompiled before running it on a different machine.
+
+
+JIT Compilation details:
+
+Most interpreted languages are based on the principle of "code once, run everywhere", because it was tedious to compile every-time you made changes to the code
+and had to recompile the code for each specific machine. Interpreted languages change this by not compiling to assembly code but something called "bytecode", 
+the thing with bytecode is that it is the same everywhere.
+
+The bytecode produces by a python interpreter on person A's computer, for instance, will be the same if person B compiles the same code on their machine.
+The difference comes when the program is actually run, there is two ways bytecode is turned into binary for execution:
+
+(i) Interpreter: a program called an interpreter is downloaded specific to each machine, which turns bytecode into machine code line-by-line as the program executes.
+
+(ii) A Virtual Machine or VM: since binary is machine specific, these languages use a Virtual Machine which run the bytecode. At the end of the day
+                              VM's too use an assembler to turn the bytecode into native machine code, but the nuances differ for each language.

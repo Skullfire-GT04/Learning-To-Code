@@ -1,4 +1,4 @@
-package Java.Inheritance;
+package Java.OOP.Inheritance;
 
 // you inherit a class using the 'extends' keyword in the class declaration statement, followed by all the classes you want to inherit 
 // (yes java permits multiple inheritance)

@@ -59,7 +59,7 @@ int main(){
     int a = 12;
     int* p = &a; // here p points to the address of 'a'.
 
-    printf("a: %d, p: %u, &a: %u, *p: %d\n", a, p, &a, *p);
+    printf("a: %d, p: %p, &a: %p, *p: %d\n", a, p, &a, *p);
 
     // the '&' operator returns the address of anything
     // so something like &a should be read as

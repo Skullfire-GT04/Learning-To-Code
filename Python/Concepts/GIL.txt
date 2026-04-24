@@ -1,0 +1,22 @@
+If you haven't read the generic concepts folder's Parallel Processing chapter, then you will have a hard time understanding this one, so please
+go read that first.
+
+In Python there is no concept of parallel processing, I mean the language does provide a module called 'threading' which 'simulates' parallel processing
+but in reality python always uses a single thread. If you truly want parallel processing in python than the only option is to use multiple python source code 
+files and run them in parallel.
+
+This is because of a concept called the GIL (Global Interpreter Lock), which is specific to python. As you know python is an interpreted language which uses
+JIT (Just-In-Time) compilation to run its bytecode (if that sounded like utter nonsense pls check the generic concepts folder about compilation methods). 
+But you see, a single program can only use a single interpreter during its runtime. That means even if the program spawns many threads to run in parallel,
+in reality only one thread will be run because there is literally a single interpreter available for the whole program.
+
+This limitation of python programs to a single interpreter is called the GIL (Global-Interpreter-Lock). But since each program has its own unique interpreter,
+if you truly want parallel processing in python, the only option is to manually run multiple python programs so that each one gets executed by their own interpreter 
+in parallel.
+
+
+Then how does python simulate threads and parallel processing?
+
+Well if a program uses multiple threads then the interpreter just switches between them very quickly, its like its loops over the array of 
+threads until they are completed. To us humans we cannot detect such small time gaps, and so we perceive that all the threads are running in parallel,
+but in reality the interpreter is switching between them really fast for us to notice.

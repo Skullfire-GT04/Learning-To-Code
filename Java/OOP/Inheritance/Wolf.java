@@ -1,6 +1,5 @@
-package Java.Inheritance;
+package Java.OOP.Inheritance;
 
-import Java.Inheritance.Animal;
 
 class Wolf extends Animal{
 
