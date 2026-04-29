@@ -1,6 +1,6 @@
-package Java.Scopes;
+package Java.Scopes.pkg2;
 
-import Java.Scopes.A;
+import Java.Scopes.pkg1.A;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,6 +17,6 @@ public class Main {
 
     */
 
-    A.a();
+    
     }
 }

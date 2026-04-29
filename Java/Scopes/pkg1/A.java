@@ -1,4 +1,4 @@
-package Java.Scopes;
+package Java.Scopes.pkg1;
 
 class A {
 
