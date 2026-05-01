@@ -1,0 +1,42 @@
+The word 'static' itself just means: something that doesn't change. And that's the whole concept in Java too.
+Whenever you add the word 'static' in the declaration of any function or variable, it becomes static in the sense that it doesn't change whenever
+new objects of the class to whom those functions and variables belong to, they don't get initialized more than once.
+
+Basically if you know anything about objects in programming, you know that whenever new objects are initialized everything about that object is 
+copy pasted essentially. That means all the functions and variables associated with that particular class are copied and customized to fit this
+particular newly instantiated object.
+
+But static functions and variables are different because even though all objects that are instantiated from the parent class can access static functions 
+and variables, they all access the same functions and variables. 
+
+That means if you have a class like this:
+
+
+class A{
+    static int a = 0;
+    A(){
+        a++;
+    }
+}
+
+The variable 'a' is shared across all the objects that will be instantiated using this class, and the same goes for 
+functions too, like say you have a function like so:
+
+class Utils{
+    static int add(int a, int b){
+        return a + b;
+    }
+}
+
+Now instead of this 'add' function being a part of an object, it is part of the class. And all objects share this same
+function.
+
+The thing to remember is that, "static functions and variables belong to the class rather than an object".
+And since they belong to the class, you can access them without using an object, like how you use the functions defined 
+in the Math module like so Math.sin or Math.floor and so on.
+
+But since static functions are part of the class and not a particular object, that means the function definition of a static
+function cannot include any object specific variable or property reference. That just means it cannot use the 'this' keyword
+to access the objects attributes since static functions don't belong to an object in the first place.
+
+You can make classes static as well, but you cannot make top-level classes static, you can only make nested-classes as static.

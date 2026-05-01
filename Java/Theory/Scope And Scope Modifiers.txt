@@ -1,0 +1,132 @@
+Scope in any programming language means visibility, how visible is a particular variable, function or class. 
+But computers can't 'see' so visibility is kind of misleading to the learner here. Vision in programming means accessability,
+you know how we import certain modules in our code, in order to do so we first need to know where these modules are located in the filesystem.
+
+And even if we know where they are located, we need to have access to import them, and then even after importing modules, we need 
+to define which parts of the module is permitted for us to access. That is where scope modifier comes in, they help us define all these things.
+
+There are four scope modifiers in Java which help us achieve this:
+
+(i) Private: any class, function, or variable with this scope modifier will only be visible in the class where it is defined.
+             By convention top-level classes cannot be private, but you can defines nested-classes and make them private so that 
+             only the outer class can use it.
+
+        (a) Private classes example:
+
+            class Outer{
+                private class Inner{
+
+
+                }
+            }
+
+        (b) Private function example"
+
+            class A{
+                private void a(){
+
+                }
+            }
+
+        (c) Private variable example:
+
+            class A{
+                private int a = 1;
+            }
+
+
+(ii) Protected: This is essentially the same as private with the only difference being that rather than being limited to the parent class,
+                any class which inherits the parent class will also be able to access protected members and also any class within the same package. 
+                And same with private you cannot define top-level classes in Java as protected.
+
+        (a) Protected class example:
+
+            class Outer{
+                protected class Inner{
+
+
+                }
+            }
+        
+        (b) Protected function example:
+
+            class A{
+                protected void a(){
+
+                }
+            }
+        
+        (c) Protected variable example:
+
+            class A{
+                protected int a = 1;
+            }
+
+(iii) None or default: if you define a class, function or variable with this modifier it just means only classes within the 
+                       same package as their parent class can access the attributes.
+
+        (a) Default Class example:
+
+            class A{
+
+            }
+        
+        (b) Default function example:
+
+            class A{
+                void a(){
+
+                }
+            }
+        
+        (c) Default variable example:
+
+            class A{
+                int a = 1;
+            }
+
+(iv) Public: this modifier makes a class, function or variable visible throughout the filesystem, that means any class or package can 
+             access it.
+
+        (a) Public class example:
+
+            public class A{
+
+            }
+        
+        (b) Public function example:
+
+            class A{
+                public void a(){
+
+                }
+            }
+        
+        (c) Public variable example:
+
+            class A{
+                public int a = 1;
+            }
+
+But you might raise an eyebrow at this system, because if you try to, you can make a class private and make its functions or variables as public, or make a
+class public and make its functions or variables as private or protected.
+
+Basically you can mismatch different scope modifiers at different levels, like class-level, function-level or variable-level.
+
+Case 1: Class is public
+
+        If the parent class is public then everything inside the class which is specifically not assigned the private or protected modifier
+        are visible globally.
+
+Case 2: Class is private
+
+        If the parent class is private then even if its functions and variables are declared as public, they won't be visible outside of the
+        outer class. 
+
+Case 3: Class is default:
+
+        If the class is default then making its members public won't make them visible globally. Whereas if you make any members as private then 
+        they will only be to the class itself or any of its sub-classes if you make them protected instead.
+
+
+Basically the class scope modifier takes the highest priority, but any member which is modified as private or protected takes even higher priority.

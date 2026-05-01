@@ -1,6 +1,6 @@
 package Java.Scopes.pkg2;
 
-import Java.Scopes.pkg1.A;
+import Java.Scopes.pkg1.B;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,7 +16,14 @@ public class Main {
     classes, but also to functions and variables.
 
     */
+    
+    // can access public classes defined in other packages
+    B b = new B();
+    b.b();
 
+    // can access default scope modified classes within the same package
+    C c = new C();
+    c.c();
     
     }
 }
