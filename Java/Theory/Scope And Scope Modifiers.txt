@@ -130,3 +130,13 @@ Case 3: Class is default:
 
 
 Basically the class scope modifier takes the highest priority, but any member which is modified as private or protected takes even higher priority.
+
+Just remember this table for future reference:
+
+___________________________________________________________________________________________________
+|Modifier    |   Same Class    |   Same Package    |   Subclass (Diff Package)    |    Globally   |
+|____________|_________________|___________________|______________________________|_______________| 
+|__Private___|_______Yes_______|_______No__________|____________No________________|_____No________|
+|__Default___|_______Yes_______|______Yes__________|____________No________________|_____No________|
+|_Protected__|_______Yes_______|______Yes__________|___________Yes________________|_____No________|
+|___Public___|_______Yes_______|______Yes__________|___________Yes________________|_____Yes_______|

@@ -1,0 +1,14 @@
+Just like how in open world video games there is limit to the world map (unless you are playing Minecraft), there is a limit to 
+where you can read and write data from/to. And that limit is called the bounds of the data structure, like an array with a length of 
+10 has a bound of 10 elements.
+
+Whenever in code we directly or indirectly make it so that we are reading from or writing to a section in memory which we don't own,
+it results in unpredictable behavior, you might read some data which is garbage, or modify some other variable's memory.
+Out-of-bounds read and write operations were one of the first forms of hacking implementations.
+
+To make sure we write code which doesn't read or write out-of-bounds we should always check the length of the 
+variable in memory and see if we are allowed to continue with our read/write operation, if not, then we should abandon the operation 
+and give the user an error.
+
+Most modern languages have the compilers give errors to the programmer whenever their code access any memory which they don't own
+but for low level languages like C/C++ it is much more important to implement good bound checking code.

@@ -40,3 +40,4 @@ function cannot include any object specific variable or property reference. That
 to access the objects attributes since static functions don't belong to an object in the first place.
 
 You can make classes static as well, but you cannot make top-level classes static, you can only make nested-classes as static.
+A static class doesn't mean you can't instantiate it, it just means you can use it inside static functions.
