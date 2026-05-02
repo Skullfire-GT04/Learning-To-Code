@@ -1,0 +1,15 @@
+In the modern world everything is about looks, and the same applies to programming as well. In the old days people used to write programs
+which used a TUI instead of a GUI (Graphical User Interface), that is to say, you needed to type commands to use the programs.
+
+And it was hard, so with the advent of the internet people wanted to crete websites which have a GUI, and that's how HTML was born. It is not a programming
+language per se, it is something I like to call, "A descriptive language". Though technically I guess it is a "Markup Language" because the 
+full-form of HTML is Hyper Text Markup Language. But all it does is describe the layout of a webpage.
+
+How elements should be rendered, in which order, and how they should be grouped and so on. The actual implementation of these HTML commands is done
+by the browser which you use to surf the internet. Like for example, if you have the following HTML code:
+
+    <p>This is some text in a para element.</p>
+
+The browser will read this code and render text on the screen as described by the element above. But you didn't need to write functions to render
+the actual pixels on the screen in order to render the text, all of that is handled by the browser, that is why I call HTML a descriptive language.
+
