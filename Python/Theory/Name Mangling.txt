@@ -1,0 +1,38 @@
+Unlike languages like Java which provide a clear way to modify the scope of attributes of an object, python has no way of doing so.
+That is to say you cannot make something a private member of an object, everything is public. 
+
+So in order to simulate encapsulation and other things which scope modifiers enable, we use the '_' method in python. 
+
+The attributes that you want to keep private, i.e. you don't want any other process other than the object's own processes to access
+the attributes, you add either a single underscore (_) or a double underscore (__) before the name of those attributes.
+
+Though technically other processes can still access these underscore prefixed attributes, but it is a convention when writing 
+python code to not use attributes which are prefixed with underscore(s).
+
+So something like this:
+
+class Example:
+
+    def __init__(self):
+        self._priv_attr = None
+
+In the above code, self._priv_attr should not be accessed directly, though you technically can access it directly.
+
+
+Name Mangling
+
+The concept of name mangling arises when you prefix attributes with two underscores instead of a single underscore like so:
+
+class Example:
+
+    def __init__(self):
+        self.__priv_attr = None
+
+In the above code python's interpreter will automatically change the object's __priv_attr to _Example__priv_attr. This process of 
+automatically changing the attribute name is called name mangling.
+
+The general format for name mangling is like so:
+
+_ClassName__originalAttributeName
+
+This further prevent you from accidentally accessing these pseudo-private attributes. 

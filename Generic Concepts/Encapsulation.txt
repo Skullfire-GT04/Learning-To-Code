@@ -1,0 +1,15 @@
+This is a concept associated with OOP (Object Oriented Programming) so not all languages will have this concept,
+but all it means is to provide a way for you to read/write into private attributes of an object.
+
+Whenever you make an attribute private i.e. only the object's own code can access it directly, but you need to 
+access said attribute through other processes as well, that's where the need for encapsulation arises.
+
+You achieve this using getters and setters. Getters are functions which read the value of the private attribute
+and return the value back, setters take in a new value for the attribute and change the attribute's value to the 
+provided new value.
+
+You might ask, well why bother with this intricate process of using functions to read/write the value of an attribute
+when you can just make it public for every process to use openly. Well you see, sometimes you might want
+to keep the attribute's value a secret, like a password to a bank account, and getters and setters provide 
+a way to safely read/write the attribute's value by implementing some authentication processes.
+
