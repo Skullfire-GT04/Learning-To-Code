@@ -125,6 +125,41 @@
             border-radius: 10px;
         }
 
+        #rating{
+            width: 50px;
+            align-self: center;
+            padding-left: 15px;
+            font-weight: bolder;
+            color: black;
+            font-size: 1rem;
+        }
+
+        #rating_submit{
+            width: max-content;
+            height: max-content;
+            padding: 7px;
+            border: none;
+            color: white;
+            background-color: #010101;
+            border-radius: 10px;
+            align-self: center;
+            margin-top: 0.5rem;
+            transition: all linear 100ms;
+        }
+
+        #rating_submit:hover{
+            transform: scale(1.1);
+        }
+
+        #rating_submit:active{
+            transform: scale(0.9);
+        }
+
+        .vid-container{
+            display: flex;
+            justify-content: center;
+        }
+
     </style>
 </head>
 <body>
@@ -148,8 +183,10 @@
             <img class="sample-img" src="img1.jpeg" alt="A cool pic">
         </div>
         <div class="img-card">
-            <p>I made this next img, pls rate =)</p>
+            <p>I made this next img, pls rate it out of 10 =)</p>
             <img class="sample-img" src="img2.jpg" alt="My own drawing">
+            <input id="rating" type="number" min="0" max="10" placeholder="5">
+            <button id="rating_submit" onclick="get_feedback()">Submit Rating !</button>
         </div>
     </div>
 
@@ -161,7 +198,53 @@
     <div class="input-container">
         <p>Type in your name here pls:</p>
         <input type="text" placeholder="This is a text input" class="txt-in1" minlength="10" maxlength="20" required size="30">
-        
     </div>
+
+    <div class="vid-container">
+        <video src="song1.mp4" controls autoplay>Ur browser cannot play mp4 videos</video>
+    </div>
+
+    <script>
+
+        const get_feedback = () => {
+            let rate = Number(rating.value);
+            switch(rate){
+                case 0:
+                    window.alert("Oh, but I made it with effort =(");
+                    break;
+                case 1:
+                    window.alert("Ok, well I guess it's not at least zero. :<(");
+                    break;
+                case 2:
+                    window.alert("Thanks for the feedback, maybe I should practice more. :|");
+                    break;
+                case 3:
+                    window.alert("I know the shading could have been better. =<");
+                    break;
+                case 4:
+                    window.alert("Almost a five, thanks man. =)");
+                    break;
+                case 5:
+                    window.alert("Thanks for the feedback, I will continue to improve I promise ;>");
+                    break;
+                case 6:
+                    window.alert("Aw, thanks so much man =)");
+                    break;
+                case 7:
+                    window.alert("Really ?!?! You are the best. ;>)");
+                    break;
+                case 8:
+                    window.alert("Thank you so much !!! ;}");
+                    break;
+                case 9:
+                    window.alert("I wish I could draw a 9, but thanks man. =)");
+                    break;
+                case 10:
+                    window.alert("Ok either you never draw, or you are a kid, but either way, thank you so much!! =>)");
+                    break;
+            }
+        }
+
+    </script>
 </body>
 </html>

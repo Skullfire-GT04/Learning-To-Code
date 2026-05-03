@@ -1,0 +1,10 @@
+CSS or Cascading Style Sheet is another "Descriptive Language" like HTML (see notes). You see we humans like to look at things 
+which are pretty, like pretty girls, a beautiful sunset and so on. And websites are no different, your website's whole purpose 
+might be to just get people to click a specific button, but what makes you think people will do it?
+
+If people only want to look at pretty things, then as a programmer its your job to make your websites pretty enough for the user to interact with.
+And that is where CSS comes in, it defines how the elements you defined in the HTML code should look like, by default HTML looks 
+pretty ugly, but with CSS you can add animations, transitions, unique colors and much more.
+
+Basically if HTML is an engineer which makes the building, then CSS is the person who decorates it, paints it, makes it look pretty.
+But yeah that's about it, there is no deeper meaning behind this language.
