@@ -1,0 +1,26 @@
+C++ was made to replace C, though it never happened, it has become a viable choice for designing low-level 
+applications with performance critical requirements, or in layman's terms, C++ be fast as f*uk boi.
+
+Initially C++ was designed to be a superset of C, that means anything you can do in C you can also do in C++,
+but it is not advised to do so, since C++ implements modern version of C features and builds on top of them in 
+its own messed up way. There is a reason why most people fear this language, it has been labelled as the language which gives you 
+every way to shoot yourself in the foot.
+
+"With great power comes great responsibility", damn the more I live the more uncle Ben seem relatable.
+
+Older folks might also call C++ as "C with classes", because that was literally the point of C++, since C was a functional 
+language it had (and still does not) no classes, so Bjarne Stroustrup (the creator of C++), made a language with the 
+efficiency and low-level control of C, but with OOP (Object Oriented Programming).
+
+There are many features in C++ which you won't find in traditional C language like:
+(i) OOP
+(ii) Generic functions
+(iii) Function Overloading
+(iv) Operator Overloading
+(v) Namespaces
+(vi) References
+(vii) Exception Handling
+(viii) Inline Functions
+(ix) In-Built Data Structure Libraries
+
+Don't worry, we will go over each topic separately until we understand them clearly.
