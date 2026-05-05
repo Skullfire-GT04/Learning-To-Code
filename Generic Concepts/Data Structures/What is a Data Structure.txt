@@ -1,0 +1,23 @@
+A data structure like a way of storing a group of variables in a contiguous (usually) manner, in other words it is a way 
+of storing data in memory. 
+
+There are many different ways of storing data in memory and hence we get many different types of data structures.
+You can even create your own unique data structures, but usually in programming we stick with the
+default ones which are :
+
+(i) Arrays
+(ii) Lists (or vectors)
+(iii) Sets
+(iv) HashMaps
+(v) Linked Lists (Single and doubly)
+(vi) Stack
+(vii) Heap
+(viii) Queue
+
+Each one is used in a different way, though I have to tell you something upfront, in memory i.e. in RAM, there is usually not that
+much of a difference between them, because at the end of the day all a data structure does is provide a way to access 
+data in a unique way.
+
+Like for example Stack is a data structure which only allows the program to access elements which are stored at the top of the stack (see notes),
+and other data structures implement their own version of the simple CRUD (Create, Read, Updates, Delete) operations, but other 
+than that there is no  difference between them.

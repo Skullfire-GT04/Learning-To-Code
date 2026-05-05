@@ -1,0 +1,13 @@
+Data Structures which provide a way to access data in a sequential way 
+are said to be iterable.
+
+Now some data structures might not provide an obvious way of iterating through their stored data, but you 
+can use whatever method they do provide for accessing elements and try to convert it into 
+an iterable way of accessing data.
+
+Some examples of default iterable data structures are:
+(i) Arrays
+(ii) Lists (or vectors)
+(iii) HashMaps (if they provide a way to access stored keys (see notes))
+(iv) LinkedLists (you have to do some pointer logic beforehand though)
+(v) Sets
