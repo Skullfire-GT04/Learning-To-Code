@@ -22,6 +22,21 @@ int main(){
     std::clog << "Hello there, I am a log message, nothing to see here keep moving" << std::endl;
     // std::clog should be read as "standard console log"
 
+    // here is how you can print numbers onto the console
+    std::cout << "Here is a number for ya : " << 2 << std::endl;
+
+    // here is how you can print a floating point number onto the console
+    std::cout << "Here is a floating point number for ya: " << 3.143656f << std::endl;
+
+    // here is how you can print boolean values to the console are true and false instead of 1 and 0
+    std::boolalpha;
+    std::cout << "True : " << true << std::endl;
+    std::cout << "False : " << false << std::endl;
+
+    // here is how you can show the positive sign when printing positive numbers
+    std::showpos;
+    std::cout << "Here is a positive number for ya: " << 142456 << std::endl;    
+
     std::cout << "I bit you the fondest of adieu mademoiselle" << std::endl;
 
     return 0;
