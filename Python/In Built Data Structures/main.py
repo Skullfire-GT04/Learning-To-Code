@@ -79,7 +79,7 @@ print("Tuple1[0] :", tuple1[0])
 # but yeah that's about all you can do with tuples 
 
 
-# (iv) Sets
+# (iii) Sets
 
 """
 If you know mathematics and the concept of set theory then this will be a piece of cake for ya,
@@ -156,8 +156,94 @@ caret_sym_diff_set = set1 ^ set2
 # let's check if they are the same
 print(caret_sym_diff_set == sym_diff_set)
 
-
 # additionally you can change a set in place using the 
 # logical operators like so:
 set1 -= set2 # removes element 4 and 5
 print(f"New set1 : {set1}")
+
+
+# (iv) Dictionaries 
+
+"""
+Dictionaries are really powerful data structures which store key-value
+pairs. The keys must be unique because of the fact that under the hood
+it hashes them, and if you know anything about 
+cryptography, then you know that if you have the same input to a hash function
+it will give the same output. 
+
+And in order for us to access the values stored inside a dictionary, we use the 
+keys, since each key is unique the runtime complexity of getting an item from a dictionary 
+is O(1) making them ideal for performance critical applications.
+
+There are two ways to instantiate dictionaries:
+(i) identifier = {keys : values}
+(ii) identifier = dict()
+"""
+
+# Like
+my_dict = {
+    "name" : "Skullfire-GT04",
+    "age" : 19,
+    "job" : "unemployed"
+}
+
+# here is how you access elements using the bracket notation
+name = my_dict["name"]
+print("Name :", name)
+
+# but if the key doesn't exist then it will throw an error
+# to combat this we use the .get method which takes in two arguments
+# the first one is the key we want to get, and the second one if the value 
+# it will return if the key doesn't exist in the dictionary
+
+# Like
+address = my_dict.get("address", None)
+if address:
+    print("Address :", address)
+else:
+    print("There is no address provided.")
+
+# here is how you add values or update them using bracket notation
+
+# adding values
+my_dict["height"] = 186
+
+# updating values
+my_dict["name"] = "Skullfire"
+
+# here is how you can access all the keys in the dictionary
+keys = my_dict.keys()
+print("Keys :", keys)
+
+# here is how you can access all the values stored in the dictionary
+vals = my_dict.values()
+print("Values :", vals)
+
+# here is how you can access all the key-value pairs as a list of tuples
+pairs = my_dict.items()
+print("Pairs :", pairs)
+
+
+"""  Common methods to all mutable in-built data types  """
+
+# The .copy method
+#
+# it returns a copy of the data structure
+
+# Like
+copy_dict = my_dict.copy()
+copy_set = my_set.copy()
+
+# if you had done something like this instead
+# copy_dict = my_dict 
+# this would be wrong
+# because copy_dict will be a pointer instead of a reference (see notes)
+
+
+# The .clear method
+# it deletes all the elements inside the data structure
+
+# Like
+my_set.clear()
+list1.clear()
+my_dict.clear()
