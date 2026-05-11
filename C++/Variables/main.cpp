@@ -20,6 +20,12 @@ int main(){
     char* name = "Skullfire-GT04";
     int age = 19;
 
+    // or like so
+    char in {'y'};
+    float pi {3.14243542};
+
+    // the format is this : data_type identifier {value(s)}
+
     // you can do type conversion like so
     // variable = (data_type) value;
 
