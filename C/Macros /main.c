@@ -8,7 +8,8 @@
 
 #define PI 3.14159265359 // this is how you define macros
 
-#define COMP(x, y) (x) > (y) ? (x) : (y) // this is how you make genric function like macros
+#define COMP(x, y) (x) > (y) ? (x) : (y) // this is how you make generic function like macros
+                                         // commonly called function-like preprocessor macros
 
 
 float calc_area(float radius){

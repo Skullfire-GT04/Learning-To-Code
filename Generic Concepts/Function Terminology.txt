@@ -1,39 +1,84 @@
-Functions are the most basic building block of any application or program, so it is only fair that they get a good 
-explanation, and this explanation doesn't just apply to functions in C but just functions in programming in general.
-
+Functions are the most basic building block of any application or program, so it is only fair that they get a good explanation.
 A function is just a block of code which can be executed when the function is called. They were introduced in programming because
 it didn't make sense to write the same code in different places again and again, it was both in-efficient and primitive to do so.
 
+Basically a function is something which stores a pointer (see notes) to a block of code, and when you want to access that block of
+code, which is essentially just a bunch of binary instructions, you can do so by calling the function by its name. You can even pass 
+arguments which could be used by the function's code to do whatever it is the function was designed to do.
 
-Now functions in C and most other programming languages are supposed to be unique. But in most modern programming languages, there is a concept
-of function overloading. But since C doesn't allow function overloading, it is superflous to learn about it, but meh here you go.
+So something like this in C:
 
-Function overloading is when you define multiple functions with the same name which perform different things.
-It is possible to define many functions with the same name because as long as the function signature is unique the language will allow for the name to be the same.
+int add(int a, int b){
+     return a + b;
+}
 
-Function Signature: The combination of the return type, the name and the parameters of a function constitues the function signature, it is a way of uniquely
-                    identifying functions for the compiler. In C even if the function signature is different, two functions cannot share the same name.
-                    In other languages, if the compiler/interpreter allows it, you can overload functions (see below).
+In the above code we are defining a function named 'add' which is the name of the pointer to the code which the function holds,
+which is just a single line, i.e. 'return a + b'. And to call this function we do something like this:
+
+int result = add(2, 2);
+
+The above code will call the function with the arguments 2 and 2 and store the return value in a variable called 'result'.
+
+Now there are some concepts related to functions, let's look at them one by one:
+
+(i) Function Signature: The combination of the return type, the name and the parameters of a function constitutes the function signature, it is a way of uniquely
+                        identifying functions for the compiler. In C even if the function signature is different, two functions cannot share the same name.
+                        In other languages, if the compiler/interpreter allows it, you can overload functions (see below).
 
 
-Function Definition/Implementation: It is the actual code which the function represents when it is called. Like the actual logic which is implemented behind every
-                                    function call.
+(ii) Function Definition/Implementation: It is the actual code which the function represents when it is called. Like the actual logic which is implemented behind every
+                                         function call.
 
 
-Function Overloading: When you write two seperate functions with different signatures but the same name, it is called function overloading. It is a technique
-                      used to make generic function names for statically types languages like C++, Java, Rust and so on. 
+(iii) Function Overloading: When you write two separate functions with different signatures but the same name, it is called function overloading. It is a technique
+                            used to make generic function names for statically types languages like C++, Java, Rust and so on. 
 
 
-Generic Functions: When working with statically typed languages, it is really hard to define an algorithm which works for all types of data, because the 
-                   functions only take in a particular type of data as input arguments. And that results into programmers needing to create different functions
-                   with different names for the same purpose essentially. And that's where the need for generic functions come in. The word generic means 'something 
-                   in general, or average', and that's what these functions are. They can take any type of input arguments, hence eliminating the need for 
-                   different functions.
+(iv) Generic Functions: When working with statically typed languages, it is really hard to define an algorithm which works for all types of data, because the 
+                        functions only take in a particular type of data as input arguments. And that results into programmers needing to create different functions
+                        with different names for the same purpose essentially. And that's where the need for generic functions come in. The word generic means 'something 
+                        in general, or average', and that's what these functions are. They can take any type of input arguments, hence eliminating the need for 
+                    different functions.
 
-                   Like, in python a genric function would look like:
+                    Like, in python a generic function would look like:
 
-                   def add(a, b): 
-                        return a + b
+                    def add(a, b): 
+                         return a + b
 
-                   here a, b can be integers, string, float or anything. But if we were to define the same function in C or any other statically typed language
-                   we would need to define a sperate function for each data type.
+                    here a, b can be integers, string, float or anything. But if we were to define the same function in C or any other statically typed language
+                    we would need to define a separate function for each data type.
+
+
+(v) Variadic Functions: These type of functions are really powerful because of the fact that they take in a variable number of input arguments.
+                        Usually when defining a function we set the number of arguments as a constant value, like:
+
+                        void print(const char* s){
+                              printf("%s\n");
+                        }
+
+                        The above defined function takes in a single argument, which is a 'string' (char*). And to use this function we do something like 
+                        this:
+
+                        print("Hello World!");
+
+                        But what if we did something like this:
+
+                        print("Hi there", " my name is Skullfire");
+
+                        Since the function defined only takes in a single argument, the above code will raise an error. But what if we wanted it to
+                        take in two or more arguments without needing to change the function definition? That's where variadic functions come in,
+                        as defined before, variadic functions take in a variable number of arguments, so something like so:
+
+                        def add(*args):
+                              return sum(args)
+
+                        The above code defines a variadic function in python, the argument '*args' represents a list of variable argument
+                        in python.
+
+                        So function calls like:
+                        add(1, 2, 3)
+                        or 
+                        add(1, 2, 3, 4, 5, 6)
+
+                        are all valid.
+                        

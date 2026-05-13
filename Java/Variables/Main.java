@@ -97,6 +97,12 @@ public class Main{
 
         Character cha = 'a'; // out of all the advanced or reference data types, this one is the most superfluous one in my opinion       
         // because you don't really use it for much, at least in my experience
+
+        // you can also make variables as constants
+        // using the 'final' keyword like so
+        final int f_a = 12;
+        // the above statement declares a constant which cannot be changed throughout
+        // the execution of the program
         
     }
 }

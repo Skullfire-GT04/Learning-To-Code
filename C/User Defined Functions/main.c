@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdarg.h>
 
 /*
 
@@ -43,6 +44,26 @@ void get_input(char* out, const char* prompt){
     strcpy(out, buf);
 }
 
+// You can even make variadic functions in C like so:
+int sum(int count, ...){
+    // the '...' argument represents a variable number of arguments
+    // to access them we use the stdarg header's va_list data type
+    // like so
+    va_list args; // now args represents the ... arguments
+
+    // we need to initialize a va_list data_type using the va_start macro like so
+    va_start(args, count); // we need to provide the first arguments passed into the function to the va_start macro
+
+    // now we can access args using the va_arg macro, each call to va_arg returns subsequent 
+    // values in the args data_type like so:
+
+    int sum = 0;
+    for(int i = 0; i < count; i++){
+        sum += va_arg(args, int); // the second argument is the data_type we are expecting to get
+    }
+    return sum;
+}
+
 
 int main(){
 
@@ -50,6 +71,12 @@ int main(){
     print("Hello world!");
     get_input(name, "What is your name:");
     printf("Hello there %s\n", name);
+
+    // Let's use the variadic function defines above
+    int sum1 = sum(5, 1, 23, 3, 10, 2);
+    int sum2 = sum(7, 32, 54, 1, 3, 56, 4, 2);
+
+    printf("Sum1 : %d, Sum2 : %d\n", sum1, sum2);
 
     return 0;
 }
