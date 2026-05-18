@@ -29,8 +29,10 @@
 }
 
 .anim-card {
-    width: 300px;
-    height: 200px;
+    min-width: 300px;
+    min-height: 200px;
+    max-width: max-content;
+    max-height: max-content;
     overflow: hidden;
     background-color: white;
     border: none;
@@ -64,6 +66,137 @@
     left: 50%;
     top: 0%;
     transform: translate(-50%, 0);
+    position: relative;
+    animation: ease-in 2s squish infinite;
+}
+
+@keyframes squish {
+    50%{
+        transform: translateY(125px) translateX(-50%);
+        animation-timing-function: ease-out;
+    }
+    60%{
+        transform: translateY(125px) scaleY(0.8) translateX(-50%);
+    }
+    100%{
+        transform: translateY(0px) scaleY(1) translateX(-50%);
+    }
+}
+
+#Anim3D1{
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    border-radius: 0px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bg-anim4{
+    position: absolute;
+    background-image: -webkit-radial-gradient(black, white);
+    background-size: 20px 20px;
+    width: 200%;
+    height: 200%;
+    transform-style: preserve-3d;
+    transform: 
+        rotateX(-100deg)
+        translateZ(100px)
+        translateY(101px)
+    ;
+}
+
+#anim4{
+    width: 100px;
+    height: 100px;
+    background-color: rgba(2, 0, 36, 1);
+    border: solid 3px rgb(255, 95, 95);
+    transform-style: preserve-3d;
+    animation: linear 4s trans-Z infinite;
+}
+
+#Anim3D2{
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    --side : 100px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    max-width: 200px;
+    max-height: 200px;
+    background-color: #093450;
+}
+
+#bg-anim5{
+    width: 2000px;
+    height: 230%;
+    background-image: conic-gradient(black 25%, white 50%, black 75%, white 100%);
+    background-size: 50px 50px;
+    transform: rotateX(-95deg) translateZ(-70px);
+    z-index: 1;
+}
+
+#cube{
+    width: var(--side);
+    height: var(--side);
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: rotateX(10deg) rotateY(10deg) rotateZ(10deg);
+    z-index: 2;
+    animation: linear 10s rotCube infinite;
+}
+
+
+#front, #back, #top, #bottom, #left, #right{
+    width: var(--side);
+    height: var(--side);
+    position: absolute;
+}
+#top{
+    transform: rotateX(90deg) translateZ(50px);
+    background-color:rgba(0, 212, 255, 1);
+}
+#bottom{
+    transform: rotateX(-90deg) translateZ(50px);
+    background-color: purple;
+}
+#left{
+    transform: rotateY(90deg) translateZ(50px);
+    background-color: green;
+}
+#right{
+    transform: rotateY(-90deg) translateZ(50px);
+    background-color: cyan;
+}
+#back{
+    transform: translateZ(-50px);
+    background-color: aquamarine;
+}
+#front{
+    transform: translateZ(50px);
+    background-color: blue;
+}
+
+@keyframes rotCube {
+    from{
+        transform: rotateX(0deg) rotateY(10deg) rotateZ(10deg);
+    }
+    to{
+        transform: rotateX(360deg) rotateY(10deg) rotateZ(10deg);
+    }
+}
+
+
+@keyframes trans-Z{
+    from{
+        transform: rotateY(0deg) translateZ(100px) ;
+    }
+    to{
+        transform: rotateY(360deg) translateZ(100px);
+    }
 }
 
 @keyframes bounce {
