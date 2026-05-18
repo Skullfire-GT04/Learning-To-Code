@@ -81,4 +81,45 @@ Now there are some concepts related to functions, let's look at them one by one:
                         add(1, 2, 3, 4, 5, 6)
 
                         are all valid.
-                        
+
+(vi) Lambda Functions: To explain this type of functions you have to first understand how functions are called i.e. the code a function contains is accessed.
+                       (If you haven't read the memory lingo notes then please read them first then continue here.)
+
+                       As you know a function is just a container for pre-written code, and when we call a function with some arguments (if it takes any) we are 
+                       essentially executing the code contained inside the function. But what exactly is a function, like say:
+
+                       def add(a, b): return a + b
+
+                       in this code example what exactly is the function name 'add'? 
+
+                       A function name is essentially a pointer (see notes), but unlike normal pointers which point to normal variables or data structures (see notes),
+                       a function name points to a particular address in the Text-section (see notes) of the memory assigned to a program. Because ultimately the code
+                       contained inside a function lives there.
+
+                       So when you call a function like so: add(1, 2) you are accessing the code stored in the Text-Section of the memory which the function name
+                       is pointing to.
+
+                       During a function declaration we define the function name, which then is associated with the address of the function in memory, but when 
+                       we don't provide a function name, then it just returns the address of the code we have just defined, and that is what lambda functions are.
+
+                       Lambda functions are also called anonymous functions, because they literally have no name, or a pointer which points to them.
+
+                       Like:
+
+                       In python you declare a lambda function like so:
+
+                       lambda arguments....: code......
+
+                       the above syntax defines a function with no name.
+
+                       So you might ask, if a lambda function has no name then how do you access it? I mean you need to be able to use it for it to be useful.
+
+                       Well just like how you can pass the values to a function without first assigning them to variables first, in the same way you can
+                       pass lambda functions directly to other functions without defining them with a name.
+
+                       This is really powerful since you can essentially declare hidden functions which can only be accessed privately, and this 
+                       help greatly in making sure your code is secure.
+
+                       Of course there are many other use cases for lambda functions but it all depends on the situation and the person.
+                       
+                       

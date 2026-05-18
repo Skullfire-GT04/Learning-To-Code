@@ -240,3 +240,36 @@ def do_something(name : str, age : int) -> str:
 
 # you can embed if/else statement in anything like so
 print(do_something(name if name else "Hunter", age))
+
+
+# Lambda Functions (see notes)
+
+# Here is how you declare lambda functions in python
+
+bar = lambda: print("foo")
+# now bar is a function pointer
+# and you can use it like so
+bar()
+
+# you can even declare inline lambda functions like so
+def calc_tax(salary, percentile):
+    return salary - percentile(salary)
+
+this_months_tax = calc_tax(1200, lambda sal: sal * 0.9)
+print(this_months_tax)
+
+# variadic functions (see notes)
+
+# Here is how you declare variadic functions
+
+def print_args(*args, **kwargs):
+    # args is a list (see notes)
+    # kwargs is a dictionary or hashmap (see notes)
+    for arg in args:
+        print(arg, end = " ")
+
+    for kwarg, val in kwargs.items():
+        print(f"{kwarg} : {val}", end = " ")
+    print()
+
+print_args(1, 2, "Hello", key = None, damn = "Metal Gear Solid")

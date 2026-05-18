@@ -36,3 +36,24 @@ ________________________
 
 A single cell holds 1 byte of data, a byte is made up of 8 bits, a single bit is represented by a single capacitor and is the base unit
 of memory. No matter how much I try to explain any further, there is not much more to memory than that.
+
+Now when talking about memory of a program, then things get interesting.
+Don't worry, the memory that a program uses is still the same as any old memory, but it is divided into four (usually) or more sections.
+
+Each section of the memory holds a meaning and can only be used for a specific purpose.
+Let's look at these sections:
+
+(i) Text-Segment Section: this is where the binary equivalent of the code you write lives. Once your code is compiled or interpreted into binary
+                          it is stored in this section. So all the functions, classes etc. you write in your code are stored here.
+
+(ii) Global Section: this section stores all the global or static variables. If you don't know what static means in this context then read
+                     the notes provided in the Java section. But all you need to know is that all the data stored in this section can be accessed
+                     by anyone.
+
+(iii) Stack: this is where all the variables which are created during a function call lives, since most functions are not long-lived, once a function
+             terminates the variables stored inside a particular functions's "stack-frame" are deleted and the memory is ready to be used by another 
+             function call.
+
+(iv) Heap: This is where all the variables who persist even after the function which created them are over, live. And yes that does include closures. (see notes)
+
+So you see there are mainly these four sections in the memory assigned to any program.

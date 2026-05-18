@@ -1,0 +1,18 @@
+What is a pointer?
+
+When I think of the word 'pointer' the first image that pops into my head is that of a person pointing to something, and that is actually a
+pretty solid (no one hears....) representation of the concept.
+
+In really simple terms, a pointer is a variable which stores an address in memory. That's about it. There is nothing more to them.
+Sorry if you were expecting some really complicated explanation.
+
+But I suppose this definition is not enough to inspire some ideas in the minds of the one reading, as to why pointers even exist? I mean what
+is their purpose in a program?
+
+On the contrary I would hate to program in a language where the concept of pointers doesn't exist. You see, the fact that a pointer stores an address
+is really powerful. Because the address could lead to anything, it could lead to another pointer, a normal variable, a function, an array, an object, literally
+anything. Because everything at the end of the day is stored in memory (RAM) and if you know the address of whatever it is you want to access
+you can do so pretty easily using pointers.
+
+The actual use cases of pointers are numerous and intricate so I won't bore you with the details, but you should never look down upon them,
+they are really powerful.
