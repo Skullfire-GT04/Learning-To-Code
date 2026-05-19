@@ -55,3 +55,5 @@ let tax = calc_tax(1000, (sal) => {
 });
 
 console.log(`Tax this month: ${tax}`);
+
+
