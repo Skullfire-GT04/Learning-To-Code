@@ -26,8 +26,10 @@
     background-color: rgba(200, 200, 200, 0.5);
     border: solid 3px white;
     border-radius: 30px;
+    flex-grow: 0;
     min-width: calc(100vw - 60px);
-    min-height: calc(100vh - 80px);
+    min-height: max-content;
+    overflow: hidden;
 }
 
 .anim-card {
@@ -183,12 +185,14 @@
 }
 
 #hover{
-    min-width: 500px;
-    min-height: 500px;
+    min-width: none;
+    min-height: none;
+    width: max-content;
+    height: max-content;
     border-radius: 0px;
     display: grid;
-    grid-template-rows: repeat(10, 1fr);
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 30px);
+    grid-template-columns: repeat(10, 30px);
     transform-style: preserve-3d;
     perspective: 1000px;
 }
@@ -206,6 +210,43 @@
 
 .flip-card{
     animation: linear 500ms flipping;
+}
+
+#mask-layer{
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    animation: linear 5s show-img1 infinite alternate-reverse;
+}
+
+#img-mask1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: none;
+    overflow: hidden;
+}
+
+#img1{
+    width: 300px;
+}
+
+@keyframes show-img1{
+    0%, 10%{
+        clip-path: ellipse(20% 20% at 50% 50%);
+    }
+    40%{
+        clip-path: ellipse(20% 30% at 80% 40%);
+    }
+    60%{
+        clip-path: ellipse(40% 50% at 50% 50%)
+    }
+    80%{
+        clip-path: ellipse(50% 50% at 50% 90%);
+    }
+    100%{
+        clip-path: ellipse(20% 20% at 10% 50%);
+    }
 }
 
 @keyframes flipping {

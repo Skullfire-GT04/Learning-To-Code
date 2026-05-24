@@ -60,7 +60,6 @@ const frame = () => {
     let index = Math.floor(Math.random() * 100);
     hover.children[index].classList.toggle("flip-card");
     setTimeout(frame, 1000 / 6);
-
 }
 
 
