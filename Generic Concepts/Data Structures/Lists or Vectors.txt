@@ -1,0 +1,3 @@
+A List or a Vector is a data structure which is essentially an array.
+But the difference between the two comes in the fact that an array is fixed in size during compile time, whereas a list or Vector
+can have a dynamic size, which can be changed during compile time or run time.

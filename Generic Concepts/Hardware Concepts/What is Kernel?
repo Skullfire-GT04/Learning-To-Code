@@ -1,0 +1,12 @@
+You know when i first started learning to program I always wondered how does a programming language actually work.
+I mean I learnt python as my first language so I was already in a very pre-built space, if you know what I mean. 
+Everything about computers and programming languages seemed like a giant black-box.
+
+But the more I researched into how languages are compiled or interpreted, the more and more the concept of a kernel kept 
+popping up. On paper its defined as the piece of software which sits on top of the bare metal of any computer.
+
+But that doesn't inspire any intuitive way of thinking about kernels, I literally picture a person sitting on top of my motherboard
+and his name is "Kernel (Colonel)". Which is very stupid. 
+
+In actuality what people meant to say was that a kernel is a piece of code which is coded specifically for a particular 
+CPU or GPU or any other piece of hardware. 

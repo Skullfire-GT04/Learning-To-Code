@@ -1,0 +1,10 @@
+All types of data structures in programming are based on two concepts:
+
+(i) The concept of an array
+(ii) The concept of a pointer
+
+All data structures are tied down to these concepts, because in reality there is no other way 
+to implement a data structure other than using arrays or pointers.
+
+Of course you use an array or a pointer in different ways to implement different 
+data structures, but at the end of the day, they all boil down to an array or a pointer.
