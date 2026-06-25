@@ -16,4 +16,22 @@ But what exactly does that mean?
 
 Before we continue I would recommend reading about the CPU (see notes), motherboard (see notes), firmware (see notes) and bootloader (see notes).
 
-After the bootloader finds the kernel code and loads it into RAM, the CPU begins executing the code, 
+After the bootloader finds the kernel code and loads it into RAM, the CPU begins executing the code, but here is the thing, the CPU is this all powerful
+machine which can do anything with the hardware which you tell it to, and that is risky, because "with great power comes great responsibility".
+
+If your buggy code could talk directly to the CPU and give it commands, then best believe you will break something, that is why the kernel exists.
+It is the code which lives between any application and the CPU (or hardware). But then how do you send commands to the CPU?
+
+Well the CPU runs in two modes, Privileged Mode and Restricted Mode, as the name suggests in Privileged mode you can tell the CPU to do anything,
+but in Restricted mode you can only access the CPU for a few simple functionalities, like doing maths or something like that. 
+
+If you wanna access all the other functionality a CPU offers, you have to ask a program which functions in Privileged mode to do the task on your 
+behalf, and the kernel is exactly that.
+
+A kernel executes in Privileged mode, and everything else executes in Restricted mode, that is why Privileged mode is often called Kernel Space,
+and Restricted mode is called User Space. All programs which the user uses exist in User space (obviously), and whenever those programs need 
+to access functionalities which they don't have access to, they ask the kernel.
+
+That is what those "system calls" mean, when people refer to code which does stuff for you, like drawing a window onto the screen, displaying text,
+loading files or something else.
+

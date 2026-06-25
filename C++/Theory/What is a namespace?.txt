@@ -1,0 +1,48 @@
+You know how humans are really bad at coming up with names, like take the example of human names, you have two family sides, one 
+from your mother and one from your father, there might be some people belonging to each side who share the same name,
+yet when you are given the context about which side of the family is being discussed you are quick to correctly discern who is being talked 
+about even if the name of the person also belongs to someone on the other side of the family.
+
+Like: You cousin Evan from your mother's side and your uncle Evan from your father's side, both share the same name, but when you 
+      know which side of the family is being talked about, the name Evan becomes associated with either your cousin or Uncle, there is no
+      confusion.
+
+In the same way, programmers are really bad at naming things uniquely, because frankly, it is quite tedious to do so.
+So we have to re-use certain names while naming variables, functions or even classes. Which would be okay if the scope of 
+the variables was different, the signatures (see notes) of the functions were different, and the files in which the classes were defined 
+were different and did not #include each other, but most of the time that is not the case.
+
+That is where namespaces come in, a namespace is like a scope, anything defined in a namespace doesn't interfere with any other namespace.
+So you can have two or more things which share the same name under different namespaces and the compiler won't complain.
+
+
+But that raises a question, when you want to access something which is defined in more than one namespace then how do you access it?
+I mean which namespace do you access it from?
+
+That is where the "::" or NRO (Name resolution operator) comes in, let's say you have the following code:
+
+
+namespace a{
+    float pi = 3.14f;
+}
+
+namespace b{
+    double pi = 3.1431253;
+}
+
+Now if you want to access the value of "pi" from namespace "a" you do the following:
+    a::pi;
+
+Similarly for "b" you do:
+    b::pi;
+
+Basically the syntax goes like this:
+
+namespace::value , which should be read as "get me value from namespace"
+
+so a::pi = "get me pi from a"
+so b::pi = "get me pi from b"
+
+What if you want to use the values defined in a namespace as if they were local values?
+
+That is where the "using namespace" clause comes in.

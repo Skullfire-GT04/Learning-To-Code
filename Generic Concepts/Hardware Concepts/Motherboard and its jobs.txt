@@ -7,3 +7,4 @@ slots to insert devices, like a CPU slot and pins for a particular brand of CPU,
 
 A thing to note, anything other than the CPU is made to fit inside a motherboard, but motherboard manufactures make motherboards according to 
 the CPU it is going to host.
+
