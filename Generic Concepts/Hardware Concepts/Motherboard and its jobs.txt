@@ -1,0 +1,9 @@
+A motherboard is something to which everything is connected to, whether it is a CPU, a GPU, a USB flash drive, a SSD, or a NIC (Network Interface Card),
+because at the end of the day you need some way to make devices talk to each other, even if you made everything wireless, then too the thing processing
+the radio signals will be connected to a motherboard. 
+
+In other words, a motherboard is a must. It provides sets of wires (usually copper) which connects everything, it also provides
+slots to insert devices, like a CPU slot and pins for a particular brand of CPU, a PCIe slot for graphic cards and NVMe SSDs and so on.
+
+A thing to note, anything other than the CPU is made to fit inside a motherboard, but motherboard manufactures make motherboards according to 
+the CPU it is going to host.

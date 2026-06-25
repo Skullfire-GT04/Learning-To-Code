@@ -1,0 +1,39 @@
+A CPU (Central Processing Unit) is used to execute instructions, which are basically 1's and 0's. In today's world there 
+are two main companies who make CPU's, a CPU is made up of many things, but one of the main things it has is:
+
+(i) An ALU (Arithmetic Logical Unit) : something which is used to do basic math
+(ii) Registers : something to store data in which the ALU uses
+(iii) Cache : a place to store data which is then stored in the registers
+(iv) CU (Control Unit) : Controls talking to other devices
+(v) Decoder Unit : decodes instructions 
+
+A CPU's main job is coordinating the flow of data between devices, and processing data. Though technically a CPU doesn't actually
+does everything on its own, like say you have a printer connected to your PC. To print something using the printer you might send instructions to
+the CPU via an app, but the CPU doesn't control the inker, cartridge or anything else which the printer uses, the printer comes installed 
+with a micro-controller which is like a mini-CPU whose job is to control the printer, so the CPU just asks the micro-controller to do the 
+printing on its behalf.
+
+Similarly, the CPU doesn't micro-manage everything on its own, it delegates task to the devices themselves. 
+
+But how does it all happen?
+
+Ok let's take a specific example:
+let's say you open a file in python with the following code:
+
+with open("file.txt", "r") as f:
+    print(f.read(1024))
+
+Internally this is what happens:
+                                        (binary instructions)
+Python Code -----------> ByteCode ------------> C Code ------------> CPU -----------------------> SDD/HDD Micro-controller ------------------> Loads Into RAM ||
+              Compiler             Interpreter                            Reads The Instructions                             Looks For File                   ||
+                                                                                                                                                              ||
+                                                                                                                                                              ||
+                                                                                                                                                              \/
+                                                               Screen <------------- FrameBuffer <--------------  Registers   <--------------  Loads Into Cache
+
+Yeah there are a lot of step for loading a file and then printing the contents onto your screen, a CPU manages each step to some extent, that is why it is 
+the brain of the computer.
+
+But how does a CPU accomplish this? I mean it needs a way of sending signals to every device in some way to make them to things on its behalf.
+That is where the motherboard comes in. (See notes)

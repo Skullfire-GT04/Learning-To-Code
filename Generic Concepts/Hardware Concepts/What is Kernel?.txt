@@ -9,4 +9,11 @@ But that doesn't inspire any intuitive way of thinking about kernels, I literall
 and his name is "Kernel (Colonel)". Which is very stupid. 
 
 In actuality what people meant to say was that a kernel is a piece of code which is coded specifically for a particular 
-CPU or GPU or any other piece of hardware. 
+CPU, a CPU (Central Processing Unit) is the brain of any device, so a code which is coded specifically for the CPU controls
+everything.
+
+But what exactly does that mean?
+
+Before we continue I would recommend reading about the CPU (see notes), motherboard (see notes), firmware (see notes) and bootloader (see notes).
+
+After the bootloader finds the kernel code and loads it into RAM, the CPU begins executing the code, 

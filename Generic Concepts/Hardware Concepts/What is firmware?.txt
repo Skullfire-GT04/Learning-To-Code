@@ -1,0 +1,7 @@
+Firmware is the code which is run when your computer starts, it is stored inside the motherboard itself, and its job is to 
+prep the CPU and everything else which the CPU needs to load the bootloader (see notes).
+
+But prep the computer in what way?
+
+Well to begin with, the registers might contain garbage data, the cache might contain garbage data, and the RAM is uninitialized,
+the CPU needs to be in-sync with everything so it configures the clock speed of the CPU and many more things.

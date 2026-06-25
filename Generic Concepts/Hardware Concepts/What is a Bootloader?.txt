@@ -1,0 +1,10 @@
+A bootloader is a special program which is loaded into RAM after the firmware had done its job (see notes), this program's
+only job is to load the kernel (see notes), how does it do it though?
+
+Simple, it just asks the CPU, which asks the SSD or HDD which stored the kernel to be loaded into RAM.
+But how does it know where the kernel code lives and in which storage device? 
+
+Ok, firstly storage devices are divided into blocks, and the bootloader is programmed to look for kernel code
+in a specific block (if you were wondering why windows store system32 in C Drive there is your answer)
+
+In other words it knows where to find the code because it is hard-coded into the program itself.
