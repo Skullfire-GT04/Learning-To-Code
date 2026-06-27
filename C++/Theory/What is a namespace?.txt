@@ -19,7 +19,7 @@ So you can have two or more things which share the same name under different nam
 But that raises a question, when you want to access something which is defined in more than one namespace then how do you access it?
 I mean which namespace do you access it from?
 
-That is where the "::" or NRO (Name resolution operator) comes in, let's say you have the following code:
+That is where the "::" or SRO (Scope resolution operator) comes in, let's say you have the following code:
 
 
 namespace a{

@@ -28,7 +28,9 @@ float add(float a, float b){
 }
 
 // Both functions defined above have the same name, but their
-// function signatures are unique, that's why they are allowed
+// function signatures (see notes) are unique, that's why they are allowed
+// if you wanted to define two functions with the same signature, then you have to do
+// so in different namespaces (see notes)
 
 // You can even have the same return_type and argument_type as long as the number of arguments differ
 // Like so
