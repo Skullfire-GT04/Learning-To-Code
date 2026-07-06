@@ -25,7 +25,7 @@ with open("file.txt", "r") as f:
 
 Internally this is what happens:
                                         (binary instructions)
-Python Code -----------> ByteCode ------------> C Code ------------> CPU -----------------------> SDD/HDD Micro-controller ------------------> Loads Into RAM ||
+Python Code -----------> ByteCode ------------> C Code ------------> CPU -----------------------> SSD/HDD Micro-controller ------------------> Loads Into RAM ||
               Compiler             Interpreter                            Reads The Instructions                             Looks For File                   ||
                                                                                                                                                               ||
                                                                                                                                                               ||
