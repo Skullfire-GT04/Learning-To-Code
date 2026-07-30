@@ -1,0 +1,12 @@
+OOP or Object-Oriented-Programming is a way to make objects. What is an object? (A woman) Nah I'm just kidding.
+An object is something which has properties associated with it, like say a person has many properties
+associated with them, like their name, age, their job, and so on.
+
+In the same way an object in programming is basically a piece of memory which has access to properties, which can be 
+variables, functions or even other objects. The object itself is just a pointer, but it points to a section in memory which contains
+data associated with it. 
+
+Kind of like structs in C (see notes).
+
+Think of it like this, an object is just a pointer to an array which stores more pointers to different things, like 
+variables, functions and so on.

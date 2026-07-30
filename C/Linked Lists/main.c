@@ -26,7 +26,7 @@ List* init_list(int val){
     }
     tmp->head = malloc(sizeof(Node));
     if(tmp->head == NULL){
-        perror("Failed to initialize head nod.\n");
+        perror("Failed to initialize head node.\n");
         free(tmp);
         return NULL;
     }

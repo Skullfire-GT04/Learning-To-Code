@@ -9,7 +9,7 @@ basically the OS (operating system) assigns a region in RAM for each program to 
 
 (ii) Global Section: it contains the global/static variables
 
-(iii) Stack: this is where all the function calls are are resolved, all the variables declared in a function are stored here. It also stores other things
+(iii) Stack: this is where all the function calls are resolved, all the variables declared in a function are stored here. It also stores other things
              but that is the main thing which is stored here. This memory is static in size and is fixed during runtime.
 
 (iv) Heap: This section is used when the program runs out of memory in stack (Remember StackOverflow Errors), variables stored here persist even after
