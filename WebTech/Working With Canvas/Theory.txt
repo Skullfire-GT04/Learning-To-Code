@@ -1,0 +1,6 @@
+Canvas is an HTML element which allows you to draw things onto the screen, it is really useful
+for things like games, making custom UI interfaces and so on.
+
+It has an API which you can use through javascript and tell it to draw lines, rectangles, ellipses, images and so on
+onto the screen, basically everything you need to make really cool websites.
+
