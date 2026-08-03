@@ -6,6 +6,8 @@ const CANVAS_WIDTH = 500;
 const CANVAS_HEIGHT = 500;
 const BG = "black";
 const FPS = 30;
+const img = new Image()
+img.src = "img1.jpeg";
 
 // setting the dimensions of the canvas
 myCanvas.width = CANVAS_WIDTH;
@@ -56,6 +58,9 @@ let refresh = () => {
     ctx.fillStyle = "#454545";
     ctx.font = "italic 25px sans-serif";
     ctx.fillText("Hello there", 100, 300);
+
+    // let's draw an image
+    ctx.drawImage(img, 0, 320, 150, 180);
 
     setTimeout(refresh, 1000 / FPS);
 }

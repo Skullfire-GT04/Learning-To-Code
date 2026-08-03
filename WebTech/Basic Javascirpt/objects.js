@@ -38,3 +38,20 @@ if(obj.hasOwnProperty("key")){
     console.log("Key exists!");
 }
 
+// you can check if a property exists using the ?. operator
+// like so
+
+let user = {
+    name : "John Doe",
+    info: {
+        address : 'Faker St 123',
+        number: null
+    }
+}
+
+// let's say we access a property which we are not sure exists
+// and it is nested, so we can use the ?. operator like 
+
+let value = user?.info?.age;
+console.log(value); // this will print undefined
+// without ?. the above statement will throw a referenceError
