@@ -54,7 +54,7 @@ for(let index = 0; index < foods.length; index++){
     console.log(`Foods[${index}] : ${foods[index]}`);
 }
 
-// Let look at a for-in loop now
+// Let look at a for-of loop now
 /*
 The general format is:
 
@@ -68,4 +68,30 @@ for(let variable_name of iterable){
 let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 for(let num of nums){
     console.log(`${num} x ${num} : ${num ** 2}`);
+}
+// this look is used for iterable data types
+
+// Let's look at a for-in loop
+// this loop is used for objects (see notes)
+
+// The format is
+
+/*
+for(let variable_name in object){
+    .
+    .
+    .
+}
+*/
+
+let user = {
+    name : "John Doe",
+    age : 33,
+    info : {
+        address : "123 Baker Street"
+    }
+}
+
+for(let prop in user){
+    console.log(prop, ":", user[prop]);
 }

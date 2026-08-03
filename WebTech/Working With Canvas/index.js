@@ -19,7 +19,6 @@ console.log(ctx);
 
 
 
-
 let refresh = () => {
     // clearing the canvas
     ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
